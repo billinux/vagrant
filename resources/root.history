@@ -1,0 +1,580 @@
+    1  apt-get update
+    2  apt-get upgrade
+    3  apt-cache search sudo
+    4  apt-get install sudo
+    5  exit
+    6  visudo 
+    7  exit
+    8  /etc/init.d/sudo restart
+    9  exit
+   10  visudo 
+   11  exit
+   12  shutdown -r now
+   13  apt-get autoremove virtualbox-ose-guest-dkms virtualbox-ose-guest-utils virtualbox-ose-guest-x11
+   14  mount /dev/cdrom /media/cdrom
+   15  mount /dev/cdrom /media/cdrom
+   16  cd /media/cdrom
+   17  ls
+   18  ls
+   19  sh ./VBoxLinuxAdditions.run
+   20  apt-get install linux-headers-$(uname -r) build-essential
+   21  sh ./VBoxLinuxAdditions.run
+   22  shutdown -r now
+   23  apt-get install openssh-client
+   24  echo "deb http://apt.opscode.com/ wheezy-0.10 main" > /etc/apt/sources.list.d/opscode.list
+   25  apt-get update 
+   26  apt-get install opscode-keyring
+   27  apt-get update 
+   28  exit
+   29  apt-get install mercurial
+   30  apt-get remove --purge vim
+   31  vi
+   32  clear
+   33  apt-get remove --purge vim
+   34  apt-get autoremove 
+   35  clear
+   36  vi
+   37  dpkg -l | grep vim
+   38  dpkg -r vim-common
+   39  dpkg -r vim-tiny
+   40  dpkg -r vim-runtime
+   41  dpkg -P vim-runtime
+   42  dpkg -P vim-tiny
+   43  dpkg -l | grep vim
+   44  dpkg -r vim-common
+   45  dpkg -P vim-common
+   46  dpkg -l | grep vim
+   47  vi
+   48  exit
+   49  apt-get install libcurl4-gnutls-dev libexpat1-dev gettex libz-dev libssl-dev
+   50  apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+   51  exit
+   52  apt-get remove git-core
+   53  apt-get remove git
+   54  exit
+   55  ls
+   56  cd /usr/local/src/
+   57  ls
+   58  tar -zxvf curl-7.40.0.tar.gz 
+   59  ls
+   60  rm *.gz
+   61  ls
+   62  cd curl-7.40.0/
+   63  ./configure 
+   64  make
+   65  make install
+   66  ls
+   67  cd ..
+   68  ls
+   69  ls
+   70  cd git/
+   71  ls
+   72  make prefix=/usr/local/ all
+   73  make prefix=/usr/local/ install
+   74  cd ..
+   75  ls
+   76  exit
+   77  lsmod | grep vbox
+   78  exit
+   79  visudo 
+   80  /etc/init.d/sudo restart
+   81  exit
+   82  apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
+   83  exit
+   84  wget http://www.dotdeb.org/dotdeb.gpg
+   85  apt-key add dotdeb.gpg 
+   86  exit
+   87  vim /etc/ssh/sshd_config 
+   88  ll
+   89  exit
+   90  apt-get install zsh
+   91  exit
+   92  chown -R vagrant:root /usr/local/
+   93  exit
+   94  vi /etc/ssh/sshd_config 
+   95  vim /etc/ssh/sshd_config 
+   96  service ssh restart
+   97  exit 
+   98  cd /usr/local/go/src/
+   99  ls
+  100  ./all.bash 
+  101  exit
+  102  cd ..
+  103  ls
+  104  script/build 
+  105  exit
+  106  exit
+  107  ll
+  108  cd /etc/apt/sources.list.d/
+  109  ls
+  110  cat dotdeb.list >> ../sources.list
+  111  cat opscode.list >> ../sources.list
+  112  cd ..
+  113  vi sources.list
+  114  vim sources.list
+  115  exit
+  116  cd
+  117  la -la
+  118  ls -la
+  119  vi
+  120  vim
+  121  vim .bashrc 
+  122  ls -la
+  123  mv .bashrc .bashrc.old
+  124  ln -sfn /home/vagrant/.bashrc ~/.bashrc
+  125  source .bashrc
+  126  ln -sfn /home/vagrant/.bash_prompt ~/.bash_prompt
+  127  source .bashrc
+  128  ll
+  129  ln -sfn /home/vagrant/.bash_aliases ~/.bash_aliases
+  130  source .bashrc
+  131  ll
+  132  ln -sfn /home/vagrant/.bash-git-prompt ~/.bash-git-prompt
+  133  sb
+  134  ln -sfn /home/vagrant/.vimrc ~/.vimrc
+  135  ln -sfn /home/vagrant/.cache/.vim/ ~/.vim
+  136  sb
+  137  vi
+  138  ll
+  139  vi
+  140  ll
+  141  rm -rf .vim
+  142  ll
+  143  cd /home/vagrant/.cache/.vim/.cache/undo/
+  144  mkd ~/.cache/.vim/.cache/undo
+  145  cd
+  146  vi
+  147  rm -f .vimrc
+  148  cp /home/vagrant/.vimrc .
+  149  vi .vimrc 
+  150  ll
+  151  ln -sfn /home/vagrant/.dircolors ~/.dircolors
+  152  sb
+  153  ll
+  154  la
+  155  cd
+  156  la
+  157  pwd
+  158  vim
+  159  cd .cache/
+  160  ll
+  161  cd .vim/
+  162  ll
+  163  rmf neobundle/
+  164  ll
+  165  vi /root/.vimrc 
+  166  ll
+  167  cd neobundle/
+  168  ll
+  169  cd
+  170  exit
+  171  ll
+  172  cd /etc/apt/sources.list.d/
+  173  ll
+  174  cat dotdeb.list >> ../sources.list
+  175  cat opscode.list >> ../sources.list
+  176  cat percona-server.list >> ../sources.list
+  177  s
+  178  ll
+  179  vi sources.list
+  180  ll
+  181  rm sources.list~
+  182  ll
+  183  rm trusted.gpg~
+  184  ll
+  185  cd sources.list.d/
+  186  ll
+  187  rm dotdeb.list opscode.list percona-server.list
+  188  ll
+  189  vi mariadb.list.save
+  190  ll
+  191  s
+  192  ll
+  193  cp sources.list sources.list.save 
+  194  ll
+  195  apt-get update 
+  196  apt-get install mariadb-server
+  197  cd /etc/apt/
+  198  ll
+  199  cd apt.conf.d/
+  200  ll
+  201  mariadb-server : Depends: mariadb-server-10.0 (= 10.0.16+maria-1~wheezy) but it is not going to be installed
+  202  ll
+  203  cd preferences.d/
+  204  ll
+  205  apt-get install mariadb-server
+  206  apt-cache policy mariadb-server
+  207  apt-get install mariadb-server
+  208  apt-get install php5-curl php5-xmlrpc php5-gd php5-intl libapache2-mod-php5 php5 php5-common php5-dev php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-mysql php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy
+  209  apt-get remove php5-curl php5-xmlrpc php5-gd php5-intl  php5 php5-common php5-dev php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-mysql php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy
+  210  apt-get autoremove 
+  211  ll
+  212  apt-get install php5
+  213  service apache2 restart 
+  214  exit
+  215  ll
+  216  apt-get install mariadb-server
+  217  vi /etc/apt/sources.list
+  218  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+  219  add-apt-repository 'deb http://ftp.igh.cnrs.fr/pub/mariadb/repo/10.0/debian wheezy main'
+  220  apt-get update 
+  221  apt-get install mariadb-server
+  222  vi /etc/apt/sources.list
+  223  apt-get update 
+  224  apt-get install mariadb-server
+  225  cd /etc/apt/preferences.d/
+  226  ll
+  227  vi mariadb
+  228  s
+  229  vi sources.list
+  230  apt-get update 
+  231  apt-get install mariadb-server
+  232  cd preferences.d/
+  233  l
+  234  ll
+  235  rm mariadb 
+  236  ll
+  237  s
+  238  vi sources.list
+  239  cd preferences.d/
+  240  vi mariadb.pref
+  241  s
+  242  vi sources.list
+  243  apt-get update 
+  244  apt-get install mariadb-server
+  245  cd preferences.d/
+  246  ll
+  247  cd
+  248  ll
+  249  shutdown -h now
+  250  ll
+  251  cd ~/
+  252  ll
+  253  la
+  254  pwd
+  255  h
+  256  la
+  257  mv .vimrc .vimrc.bak
+  258  ln -sfn /home/vagrant/.vimrc ~/.vimrc
+  259  vi .vimrc
+  260  ll
+  261  la
+  262  mv .cache/ .cache.bak
+  263  ln -sfn /home/vagrant/.cache/ ~/.cache
+  264  vi .vimrc
+  265  ll
+  266  la
+  267  rmf *.bak
+  268  la
+  269  vi .bash_aliases 
+  270  ll
+  271  la
+  272  rmf .cache.bak/ .vimrc.bak 
+  273  la
+  274  h
+  275  path
+  276  vi .bashrc
+  277  sb
+  278  cd /usr/local/src/git/
+  279  ls
+  280  s
+  281  exit
+  282  vi /etc/motd 
+  283  cat > /etc/motd 
+  284  vi /etc/motd 
+  285  ll
+  286  la
+  287  cd
+  288  pwd
+  289  la
+  290  vi .bashrc
+  291  vi .bash_aliases 
+  292  sb
+  293  q
+  294  apt-get install figlet fortune cowsay
+  295  q
+  296  vi /etc/motd 
+  297  ll
+  298  sb
+  299  ll
+  300  cd
+  301  vi .bashrc
+  302  ll
+  303  exit
+  304  vi /etc/apache2/apache2.conf 
+  305  ll
+  306  pushd /etc/apache2/
+  307  ll
+  308  cd mods-enabled/
+  309  ll
+  310  ls
+  311  a2enmod php5
+  312  a2enmod rewrite
+  313  a2enmod userdir
+  314  a2enmod ssl
+  315  a2enmod proxy
+  316  service apache2 restart
+  317  ls
+  318  s
+  319  ll
+  320  cd mods-available/
+  321  ll
+  322  ls
+  323  exit
+  324  ll
+  325  q
+  326  apt-cache policy mariadb-server
+  327  cd /etc/apt/
+  328  ll
+  329  vi sources.list
+  330  ll
+  331  apt-get install software-properties-common
+  332  apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+  333  add-apt-repository 'deb http://download.nus.edu.sg/mirror/mariadb/repo/10.0/ubuntu trusty main'
+  334  apt-get update && upgrade
+  335  apt-get upgrade
+  336  ll
+  337  apt-get install mariadb-server mariadb-client
+  338  vi sources.list
+  339  apt-get update
+  340  apt-get install mariadb-server mariadb-client
+  341  vi sources.list
+  342  apt-get update
+  343  apt-get install mariadb-server mariadb-client
+  344  vi sources.list
+  345  apt-get update
+  346  apt-get install mariadb-server mariadb-client
+  347  vi sources.list
+  348  apt-get update
+  349  apt-get install mariadb-server mariadb-client
+  350  vi sources.list
+  351  apt-get update
+  352  apt-get install --reinstall mariadb-server mariadb-client
+  353  apt-get -f
+  354  apt-get install --reinstall mariadb-server mariadb-client
+  355  apt-get -f install
+  356  q
+  357  apt-get install --reinstall mariadb-server mariadb-client
+  358  mysql -u root -p
+  359  ll
+  360  service apache2 restart 
+  361  apt-get install php5-xcache
+  362  apt-get install phpmyadmin
+  363  service apache2 restart 
+  364  vi /etc/network/interfaces
+  365  c
+  366  shutdown -h now
+  367  cat > /etc/motd 
+  368  c
+  369  vi /etc/network/interfaces
+  370  reboot
+  371  cat > /etc/motd 
+  372  c
+  373  vi /etc/network/interfaces
+  374  reboot
+  375  ll
+  376  ifconfig =a
+  377  ifconfig -a
+  378  apt-get remove openssh-server openssh-client
+  379  apt-get autoremove 
+  380  cd /etc/
+  381  rmf ssh
+  382  shutdown -h now
+  383  ll
+  384  ifconfig =a
+  385  ifconfig -a
+  386  apt-get remove openssh-server openssh-client
+  387  apt-get autoremove 
+  388  cd /etc/
+  389  rmf ssh
+  390  shutdown -h now
+  391  ll
+  392  ifconfig =a
+  393  ifconfig -a
+  394  apt-get remove openssh-server openssh-client
+  395  apt-get autoremove 
+  396  cd /etc/
+  397  rmf ssh
+  398  shutdown -h now
+  399  apt-get install openssh-server openssh-client
+  400  service ssh restart
+  401  vi /etc/network/interfaces
+  402  ifconfig =a
+  403  ifconfig -a
+  404  service networking restart
+  405  ifconfig -a
+  406  vi /etc/hostname 
+  407  service hostname.sh restart
+  408  service hostname.sh start 
+  409  ll
+  410  invoke-rc.d hostname.sh start
+  411  invoke-rc.d hostname.sh force-reload
+  412  reboot
+  413  apt-get install openssh-server openssh-client
+  414  service ssh restart
+  415  vi /etc/network/interfaces
+  416  ifconfig =a
+  417  ifconfig -a
+  418  service networking restart
+  419  ifconfig -a
+  420  vi /etc/hostname 
+  421  service hostname.sh restart
+  422  service hostname.sh start 
+  423  ll
+  424  invoke-rc.d hostname.sh start
+  425  invoke-rc.d hostname.sh force-reload
+  426  reboot
+  427  ll
+  428  whereis php.ini
+  429  cd /etc/apache2/
+  430  ll
+  431  cd conf.d/
+  432  ll
+  433  s
+  434  ll
+  435  s
+  436  cd php5/
+  437  ll
+  438  cd apache2/
+  439  ll
+  440  vi php.ini 
+  441  h
+  442  q
+  443  cd /etc/apache2/mods-enabled/
+  444  ll
+  445  ls
+  446  a2enmod proxy_http
+  447  q
+  448  service apache2 restart
+  449  vi /etc/apache2/httpd.conf
+  450  service apache2 restart
+  451  vi /etc/apache2/apache2.conf 
+  452  vi /etc/apache2/httpd.conf
+  453  service apache2 restart
+  454  service apache2 stop
+  455  service apache2 start
+  456  vi /etc/apache2/httpd.conf
+  457  vi /etc/hosts
+  458  service hostname.sh start
+  459  service apache2 restart
+  460  q
+  461  pushd /etc/apache2/sites-available/
+  462  ll
+  463  a2ensite examplejs.com 
+  464  service apache2 reload
+  465  q
+  466  ll
+  467  pushd /etc/apache2/sites-available/
+  468  ll
+  469  vi example.com
+  470  ll
+  471  mv example.com examplejs.com 
+  472  ll
+  473  vi examplejs.com 
+  474  q
+  475  cd /etc/apache2/sites-available/
+  476  ll
+  477  vi examplejs.com 
+  478  ll
+  479  a2dissite examplejs.com 
+  480  service apache2 reload 
+  481  ll
+  482  mv examplejs.com example.com 
+  483  ll
+  484  vi example.com 
+  485  a2ensite example.com 
+  486  service apache2 reload 
+  487  vi example.com 
+  488  service apache2 reload 
+  489  q
+  490  lsmod 
+  491  q
+  492  cd /etc/apache2/sites-available/
+  493  ll
+  494  vi example.com 
+  495  ll
+  496  ifconfig =a
+  497  ifconfig -a
+  498  q
+  499  netstat -anp | grep sshd
+  500  shutdown -h now
+  501  netstat -anp | grep sshd
+  502  shutdown -h now
+  503  netstat -anp | grep sshd
+  504  shutdown -h now
+  505  vi /etc/ssh/sshd_config 
+  506  whoami 
+  507  ll
+  508  mount
+  509  update-alternatives --config editor
+  510  update-alternatives --display vi
+  511  vi
+  512  /usr/bin/view 
+  513  vi
+  514  cd /usr/bin/
+  515  ll vi*
+  516  view
+  517  ll vi*
+  518  apt-get install nvi
+  519  nvi
+  520  ll nvi*
+  521  vi
+  522  cd
+  523  vi .bash_aliases 
+  524  sb
+  525  vi
+  526  exit
+  527  update-alternatives --set editor /usr/local/bin/vim
+  528  /usr/bin/editor 
+  529  update-alternatives --list editor
+  530  cd /usr/local/share/man/man1/
+  531  ll
+  532  update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 2OO --slave /usr/share/man/man1/editor.1.gz editor.1.gz /usr/local/share/man/man1/vim.1 
+  533  cd /usr/local/src/vim/
+  534  ll
+  535  hg update default
+  536  q
+  537  update-alternatives --list editor
+  538  apt-get update
+  539  apt-get install checkinstall
+  540  q
+  541  checkinstall 
+  542  uname =a
+  543  uname -a
+  544  dpkg -l | grep vim
+  545  dpkg -l | grep apache2
+  546  dpkg -L
+  547  dpkg -l
+  548  ll
+  549  q
+  550  du -sh /
+  551  q
+  552  cd /etc/udev/rules.d/
+  553  ll
+  554  shutdown =h now
+  555  shutdown -h now
+  556  cd /etc/udev/rules.d/
+  557  ll
+  558  shutdown =h now
+  559  shutdown -h now
+  560  du -sh /usr/
+  561  du -sh /boot/
+  562  du -sh /var/
+  563  du -sh /tmp/
+  564  du -sh /home/
+  565  du -sh /
+  566  cd /
+  567  ll
+  568  shutdown -h now
+  569  apt-get remove openssh-server openssh-client 
+  570  apt-get autoremove 
+  571  cd /etc/
+  572  rmf ssh/
+  573  apt-get install openssh-server openssh-client 
+  574  service ssh restart
+  575  q
+  576  vi /etc/ssh/sshd_config 
+  577  service ssh restart
+  578  q
+  579  h
+  580  h >> /home/vagrant/vagrant/resources/root.history
