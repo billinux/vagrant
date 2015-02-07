@@ -1,2328 +1,2328 @@
-    1  su -
-    2  sudo visudo -f /etc/sudoers.d/vagrant
-    3  su
-    4  sudo apt-get -y update
-    5  sudo apt-get -y install openssh-server
-    6  mkdir ~/.ssh
-    7  cd .ssh/
-    8  su
-    9  sudo groupadd admin
-   10  sudo usermod -G admin vagrant
-   11  sudo apt-get -y vim git-core
-   12  sudo apt-get -y install  git-core
-   13  sudo apt-get -y install vim
-   14  sudo update-alternatives --config editor
-   15  vi
-   16  sudo hostname vagrant
-   17  su
-   18  sudo -i
-   19  ll
-   20  echo "export PATH=$PATH:/usr/sbin:/sbin" >> .bashrc 
-   21  sb
-   22  echo $PATH
-   23  vb
-   24  sb
-   25  path
-   26  c
-   27  ll
-   28  cp .bashrc .bash_profile
-   29  vi .bash_profile 
-   30  cp .bash_profile .bash_aliases
-   31  vi .bashrc 
-   32  vi .bashrc
-   33  vi .bash_profile 
-   34  ll
-   35  cat .bashrc >> .bash_profile 
-   36  vi .bash_profile 
-   37  vi .bashrc
-   38  mv .bash_aliases .aliases
-   39  vi .aliases 
-   40  source .bash_profile 
-   41  ll
-   42  la
-   43  lk
-   44  c
-   45  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-   46  vb
-   47  vi .aliases 
-   48  source .bashrc 
-   49  ll
-   50  vb
-   51  cd
-   52  alias 
-   53  vi .aliases 
-   54  source .bashrc 
-   55  source .bash_profile 
-   56  vb
-   57  vi .bash_profile 
-   58  sb
-   59  ll
-   60  vi .aliases 
-   61  exit
-   62  cd
-   63  ls -l
-   64  ls -la
-   65  mkdir local bin
-   66  cd local/
-   67  hg clone https://vim.googlecode.com/hg/ vim
-   68  cd vim/
-   69  ls
-   70  hg pull
-   71  hg update
-   72  cd src/
-   73  make
-   74  sudo apt-get install ncurses
-   75  sudo apt-get build-dep vim
-   76  sudo apt-cache search ncurses-dev
-   77  sudo apt-get install libncurses5-dev
-   78  cd ..
-   79  ls
-   80  export LDFLAGS=-L/usr/lib
-   81  ./configure --with-features=huge --enable-perlinterp --enable-cscope --with-python --enable-rubyinterp
-   82  ./configure --with-features=huge --enable-perlinterp --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config --enable-rubyinterp
-   83  sudo make && make install
-   84  ./configure --with-features=huge --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config 
-   85  make
-   86  sudo make && make install
-   87  sudo make
-   88  sudo make install
-   89  vim
-   90  sudo -i
-   91  cd ..
-   92  ls
-   93  git clone https://github.com/git/git.git
-   94  ll
-   95  ls
-   96  cd git/
-   97  make configure
-   98  sudo apt-get install autoconf
-   99  clear
-  100  make configure
-  101  ./configure --prefix=/usr/
-  102  make all
-  103  sudo make install
-  104  which git
-  105  /usr/bin/git =v
-  106  /usr/bin/git -v
-  107  /usr/bin/git --version
-  108  sudo -i
-  109  /usr/bin/git --version
-  110  ls
-  111  ls git£
-  112  ls git*
-  113  ./git --version
-  114  mv ./git /usr/local/bin/
-  115  sudo mv ./git /usr/local/bin/
-  116  git --version
-  117  ls git-*
-  118  cd ..
-  119  ls
-  120  mv git/ git.old
-  121  git clone git://git.kernel.org/pub/scm/git/git.git
-  122  ls
-  123  sudo mv git vim /usr/local/src/
-  124  ls
-  125  cd
-  126  cd /usr/local/src/
-  127  ls
-  128  wget http://curl.haxx.se/download/curl-7.40.0.tar.gz
-  129  sudo wget http://curl.haxx.se/download/curl-7.40.0.tar.gz
-  130  ls
-  131  sudo -i
-  132  ls
-  133  sudo chown -R $USER /usr/local/
-  134  ll
-  135  ls
-  136  ls =l
-  137  ls -l
-  138  rm =rf curl-7.40.0/
-  139  rm -rf curl-7.40.0/
-  140  alias ll='ls -l'
-  141  ll
-  142  git clone git://github.com/badger/curl.git
-  143  git clone git://github.com/bagder/curl.git
-  144  ll
-  145  cd
-  146  vi .bashrc 
-  147  history | grep editor
-  148  sudo update-alternatives --config editor
-  149  vim
-  150  ll
-  151  vim .bashrc 
-  152  source .bashrc 
-  153  ll
-  154  vim .bashrc 
-  155  sb
-  156  ll
-  157  rmf local/
-  158  ll
-  159  git --version
-  160  vi
-  161  sudo -i
-  162  ll
-  163  vi .bashrc 
-  164  sb
-  165  ll
-  166  alias 
-  167  la
-  168  sudo -i
-  169  sudo pwd
-  170  chmod 0700 /home/vagrant/.ssh/
-  171  wget --no-check-certificate https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub -O /home/vagrant/.ssh/authorized_keys
-  172  chmod 0600 /home/vagrant/.ssh/authorized_keys 
-  173  chown -R vagrant /home/vagrant/.ssh/
-  174  sudo vi /etc/ssh/sshd_config 
-  175  sudo vim /etc/ssh/sshd_config 
-  176  /etc/init.d/ssh restart
-  177  sudo service ssh restart
-  178  sudo ifconfig 
-  179  echo $PATH
-  180  su - vagrant
-  181  exit
-  182  ll
-  183  vi .bashrc 
-  184  vim .bashrc 
-  185  source .bashrc 
-  186  cd .rbenv/bin/
-  187  ll
-  188  ls
-  189  cd
-  190  rm -f .bashrc 
-  191  mv .bash_profile .bashrc
-  192  source .bashrc 
-  193  ll
-  194  vi .bashrc 
-  195  vim .bashrc 
-  196  mv .aliases .bash_aliases
-  197  source .bashrc 
-  198  ll
-  199  path
-  200  vi .bashrc 
-  201  source .bashrc 
-  202  ll
-  203  path
-  204  type rbenv
-  205  cd .rbenv/
-  206  git pull
-  207  git fetch
-  208  git tag
-  209  cd
-  210  h
-  211  hl
-  212  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  213  ll
-  214  cd
-  215  cd .rbenv/plugins/
-  216  ll
-  217  cd ruby-build/
-  218  ll
-  219  ./install.sh 
-  220  ll
-  221  ./install.sh 
-  222  cd
-  223  rbenv install -l
-  224  rbenv install
-  225  rbenv install -l | less
-  226  rbenv install 2.2.0
-  227  sudo rbenv install 2.2.0
-  228  rbenv install 2.2.0
-  229  cd .rbenv/plugins/ruby-build/
-  230  ll
-  231  sh install.sh 
-  232  ruby-build 
-  233  ruby-build ~/local/ruby-2.2.0
-  234  ruby-build 2.2.0 ~/local/ruby-2.2.0
-  235  rbenv install -l | less
-  236  rbenv install 2.1.5
-  237  exit
-  238  ll
-  239  rbenv install 2.2.0
-  240  sudo -i
-  241  cd
-  242  rbenv install 2.2.0
-  243  ruby -v
-  244  ruby -version
-  245  cd
-  246  cd .rbenv/versions/
-  247  ll
-  248  cd
-  249  rbenv version
-  250  rbenv rehash 
-  251  rbenv version
-  252  cd /usr/local/src/
-  253  ll
-  254  git clone https://github.com/joyent/node.git
-  255  ll
-  256  cd node/
-  257  ll
-  258  ./configure 
-  259  make
-  260  sudo make install
-  261  node -v
-  262  git tag
-  263  npm -v
-  264  node
-  265  npm install forever -g
-  266  sudo npm install forever -g
-  267  ll
-  268  cd
-  269  ll
-  270  cd /var/
-  271  ll
-  272  cd
-  273  ll
-  274  mkdir -p dev/www/test
-  275  cd dev/www/
-  276  ll
-  277  cd test/
-  278  mkdir nodejs
-  279  cd nodejs/
-  280  vi ~/.vimrc
-  281  pushd ~
-  282  ll
-  283  la
-  284  mkdir .cache/vim/undo
-  285  mkdir -p .cache/vim/undo
-  286  popd 
-  287  vi ~/.vimrc
-  288  ll
-  289  vi serverTest.js
-  290  vi ~/.vimrc
-  291  vi serverTest.js
-  292  ll
-  293  node
-  294  ll
-  295  node serverTest.js 
-  296  vi serverTest.js
-  297  node serverTest.js 
-  298  ll
-  299  vi serverTest.js
-  300  ll
-  301  sudo npm install -g grunt grunt-cli
-  302  sudo npm install -g gulp
-  303  sudo npm install -g bower
-  304  c
-  305  sudo npm install -g yo
-  306  sudo npm install -g yeoman
-  307  c
-  308  sudo npm install -g yo
-  309  cd /usr/local/src/node/
-  310  ll
-  311  git tag
-  312  git checkout v0.10.36
-  313  git branch
-  314  ./configure 
-  315  make
-  316  sudo make install
-  317  node -v
-  318  sudo npm install -g yo
-  319  cd
-  320  cd dev/www/test/
-  321  ll
-  322  cd nodejs/
-  323  ll
-  324  rmf npm-debug.log 
-  325  ll
-  326  vi serverTest.js 
-  327  node serverTest.js 
-  328  ll
-  329  cd
-  330  sudo npm install -g generator-webapp
-  331  cd /usr/local/src/
-  332  ll
-  333  git clone git://github.com/rupa/z.git
-  334  ll
-  335  cd z/
-  336  ll
-  337  vi /home/vagrant/.bashrc 
-  338  ll
-  339  vi /home/vagrant/.bashrc 
-  340  sb
-  341  ll
-  342  cd
-  343  cd dev/www/test/
-  344  ll
-  345  cd
-  346  z /home/vagrant/dev/www/test/
-  347  ll
-  348  sudo npm install -g generator-angular
-  349  cd /usr/local/src/
-  350  ll
-  351  git clone git://github.com/rubygems/rubygems.git
-  352  ll
-  353  cd rubygems/
-  354  sudo ruby setup.rb 
-  355  ruby --version
-  356  cd
-  357  cd .rbenv/versions/
-  358  ll
-  359  rbenv rehash 
-  360  rbenv version
-  361  rbenv versions
-  362  cd ..
-  363  ll
-  364  rbenv version
-  365  rbenv versions
-  366  ll
-  367  la
-  368  cd plugins/
-  369  ll
-  370  h
-  371  h | grep ruby
-  372  h | grep 2.2.0
-  373  rbenv global 2.2.0
-  374  ruby
-  375  ruby -v
-  376  cd /usr/local/src/
-  377  ll
-  378  cd rubygems/
-  379  ll
-  380  sudo ruby setup.rb 
-  381  ruby setup.rb 
-  382  gem update --system
-  383  sudo gem install sass compass
-  384  gem install sass compass
-  385  cd
-  386  sudo npm install -g cordova
-  387  sudo npm install -g ionic
-  388  ll
-  389  npm list -g
-  390  sudo npm list -g --depth=0
-  391  sudo npm install -g grunt-phpcs
-  392  sudo npm install -g claymate
-  393  sudo npm install -g grunt-init
-  394  cd /etc/apt/sources.list.d/
-  395  ll
-  396  sudo vi dotdeb.list
-  397  sudo vim dotdeb.list
-  398  cd
-  399  sudo -i
-  400  sudo apt-get update
-  401  sudo apt-cache search php5
-  402  sudo apt-cache policy php5
-  403  sudo vim /etc/apt/sources.list.d/dotdeb.list 
-  404  sudo apt-get update
-  405  sudo apt-cache policy php5
-  406  sudo vim /etc/apt/sources.list.d/dotdeb.list 
-  407  sudo apt-get update
-  408  sudo apt-cache policy php5
-  409  sudo apt-get php-cli
-  410  sudo apt-get install php-cli
-  411  sudo apt-cache policy php5-cli
-  412  sudo apt-get install php5-cli
-  413  sudo apt-get install php-pear
-  414  pear list
-  415  pear install PHP_CodeSniffer
-  416  sudo pear install PHP_CodeSniffer
-  417  phpcs help
-  418  sudo apt-get install zerofree
-  419  cd
-  420  cd .ssh/
-  421  ll
-  422  vi authorized_keys 
-  423  ll
-  424  sudo -i
-  425  cll
-  426  ll
-  427  sudo service ssh restart
-  428  ll
-  429  vi authorized_keys 
-  430  q
-  431  ll
-  432  chmod 644 authorized_keys 
-  433  ll
-  434  sudo shutdown -h now
-  435  ll
-  436  lk
-  437  la
-  438  rmf ..vimrc.un~ 
-  439  ll
-  440  la
-  441  vi .bashrc 
-  442  ll
-  443  c
-  444  vi .bashrc 
-  445  vi .vimrc 
-  446  vi .bashrc 
-  447  ll
-  448  which vim
-  449  type vim
-  450  vi .bashrc 
-  451  sb
-  452  type vim
-  453  vi .bashrc 
-  454  sb
-  455  vi .bashrc 
-  456  sb
-  457  echo $EDITOR
-  458  vi .bashrc 
-  459  path
-  460  sb
-  461  path
-  462  vi .bashrc 
-  463  sb
-  464  path
-  465  exit
-  466  path
-  467  vi /etc/profile
-  468  ll
-  469  vi .bashrc 
-  470  exit
-  471  path
-  472  vi /etc/profile
-  473  vi /etc/bash.bashrc 
-  474  path
-  475  vi .bashrc 
-  476  sb
-  477  path
-  478  vi .bashrc 
-  479  cp .bash_aliases .aliases
-  480  sb
-  481  ll
-  482  mv .aliases .shell_aliases
-  483  sb
-  484  ll
-  485  source .bashrc 
-  486  ll
-  487  mv .bash_aliases .bash_aliases.bak
-  488  sb
-  489  ll
-  490  exit
-  491  ll
-  492  ll .shell_aliases 
-  493  vb
-  494  vi .bashrc 
-  495  vim .bashrc 
-  496  source .bashrc 
-  497  ll
-  498  exit
-  499  ll
-  500  vim .bashrc 
-  501  mv .bash_aliases.bak .bash_aliases
-  502  rm .shell_aliases 
-  503  ll
-  504  source .bashrc 
-  505  ll
-  506  vb
-  507  vim .bashrc 
-  508  vim .bash_aliases 
-  509  vi .vimrc 
-  510  source .bashrc 
-  511  vb
-  512  sudo apt-get install most
-  513  sudo apt-cache search completion
-  514  sudo apt-get install bash-completion
-  515  vb
-  516  man ls
-  517  sb
-  518  man ls
-  519  vb
-  520  man date
-  521  vb
-  522  cd
-  523  cd /usr/local/src/
-  524  ll
-  525  git clone https://github.com/magicmonty/bash-git-prompt.git
-  526  ll
-  527  cd
-  528  ln -sfn /usr/local/src/bash-git-prompt/ ~/.bash-git-prompt
-  529  lk
-  530  cd .bash-git-prompt
-  531  ll
-  532  cd
-  533  vb
-  534  sb
-  535  ll
-  536  cd /usr/local/src/git/
-  537  ll
-  538  cd
-  539  vb
-  540  sb
-  541  ll
-  542  pushd /usr/local/src/vim/
-  543  s
-  544  cd git/
-  545  s
-  546  cd
-  547  vb
-  548  sudo -i
-  549  cd /usr/local/src/
-  550  ll
-  551  git clone --recursive https://github.com/sorin-ionescu/prezto.git zprezto
-  552  ll
-  553  cd
-  554  ln -sfn /usr/local/src/zprezto/ ~/.zprezto
-  555  ll
-  556  vi .bash_aliases 
-  557  sb
-  558  lk
-  559  ls =la
-  560  la
-  561  lk
-  562  ls -lah
-  563  ls -lah|grep ->
-  564  ls -lah|grep "->"
-  565  ls -lah|grep "\->"
-  566  vi .bash_aliases 
-  567  sb
-  568  lh
-  569  source .bashrc 
-  570  lh
-  571  source .bash_aliases 
-  572  lh
-  573  lk
-  574  lli
-  575  ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
-  576  ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
-  577  ln -s ~/.zprezto/runcoms/zpreztorc ~/.zpreztorc
-  578  ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
-  579  ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
-  580  ln -s ~/.zprezto/runcoms/zshrc ~/.zshrc
-  581  zsh
-  582  vi .zpreztorc 
-  583  ll
-  584  exit
-  585  zsh
-  586  lk
-  587  ll
-  588  ls =la
-  589  ls -la
-  590  vi .bash_aliases 
-  591  vi .aliases 
-  592  ls =a
-  593  ls -a
-  594  vim .bash_aliases 
-  595  ll
-  596  vim .bashrc 
-  597  sb
-  598  source .bashrc 
-  599  ll
-  600  lk
-  601  vb
-  602  sb
-  603  zsh
-  604  exit
-  605  zsh
-  606  vb
-  607  c
-  608  vi .zshrc 
-  609  c
-  610  lk
-  611  cd .zprezto
-  612  ll
-  613  source init.zsh 
-  614  cd
-  615  zsh --version
-  616  ll
-  617  lk
-  618  zsh
-  619  ll
-  620  mv .zprezto .zprezto.link
-  621  ll
-  622  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  623  ll
-  624  zsh
-  625  lk
-  626  vi .zshrc 
-  627  ll
-  628  c
-  629  vi .zprofile 
-  630  ll
-  631  ll .zsh*
-  632  ll
-  633  cd .zprezto
-  634  ll
-  635  s
-  636  ll
-  637  s
-  638  ll
-  639  cd vagrant/
-  640  ll
-  641  lk
-  642  c
-  643  vi .vimrc 
-  644  ll
-  645  vb
-  646  sb
-  647  cd /usr/local/src/git/
-  648  ll
-  649  ls
-  650  echo $TERM
-  651  vb
-  652  sb
-  653  s
-  654  cd bash-git-prompt/
-  655  ll
-  656  cd themes/
-  657  ll
-  658  cd
-  659  vb
-  660  sb
-  661  vb
-  662  sb
-  663  source .bashrc 
-  664  vb
-  665  sb
-  666  source .bashrc 
-  667  echo $green
-  668  echo $green bill
-  669  vb
-  670  source .bashrc 
-  671  echo $bo
-  672  echo $green $bo
-  673  echo \[\033[1,36m\]bill
-  674  echo \033[1,36mbill
-  675  echo \033[1;36mbill
-  676  echo \[\033[1;36m\]bill
-  677  echo \[\033[1;36m\] bill
-  678  vb
-  679  sb
-  680  vb
-  681  sb
-  682  vb
-  683  sb
-  684  vb
-  685  sb
-  686  source .bashrc 
-  687  vb
-  688  sb
-  689  vb
-  690  sb
-  691  vb
-  692  sb
-  693  vb
-  694  sb
-  695  source .bashrc 
-  696  vb
-  697  exit
-  698  ll
-  699  echo $PS1
-  700  vb
-  701  sb
-  702  vb
-  703  sb
-  704  c
-  705  vb
-  706  sb
-  707  ll
-  708  lk
-  709  la
-  710  vb
-  711  sb
-  712  vb
-  713  sb
-  714  vb
-  715  sb
-  716  ll
-  717  tput setaf 1
-  718  tput setaf 2
-  719  tput setaf 172
-  720  vb
-  721  vi .bash_aliases 
-  722  sb
-  723  ll
-  724  lk
-  725  vb
-  726  sb
-  727  vb
-  728  sb
-  729  set
-  730  setenv
-  731  ENV
-  732  setenv
-  733  vb
-  734  sb
-  735  printenv 
-  736  vb
-  737  sb
-  738  printenv SHELL
-  739  printenv TERM
-  740  printenv green
-  741  vb
-  742  sb
-  743  ll
-  744  vb
-  745  sb
-  746  vb
-  747  sb
-  748  ll
-  749  vi .vimrc 
-  750  vb
-  751  ll
-  752  lk
-  753  lh
-  754  la
-  755  vb
-  756  vi .vimrc
-  757  ll
-  758  cd .cache/
-  759  la
-  760  cd vim/
-  761  ll
-  762  cd undo/
-  763  ll
-  764  cd
-  765  ll
-  766  vi .vimrc
-  767  cd .cache/
-  768  la
-  769  cd .vim/
-  770  la
-  771  cd
-  772  s
-  773  ll
-  774  cd vagrant/
-  775  cd .cache/
-  776  ll
-  777  rmf vim/
-  778  ll
-  779  la
-  780  cd
-  781  vi .vimrc
-  782  cd .cache/.vim/
-  783  ll
-  784  la
-  785  cd
-  786  vi .vimrc
-  787  cd .cache/.vim/
-  788  la
-  789  vi .vimrc
-  790  cd
-  791  vi .vimrc
-  792  cd .cache/.vim/
-  793  ll
-  794  la
-  795  cd
-  796  vi .vimrc
-  797  cd .cache/.vim/.cache/undo/
-  798  ll
-  799  la
-  800  cd
-  801  ll
-  802  vi .vimrc
-  803  cd .cache/.vim/neobundle/base16-vim/
-  804  ll
-  805  cd colors/
-  806  ll
-  807  vi ~/.vimrc
-  808  vb
-  809  sb
-  810  vb
-  811  vi ~/.vimrc
-  812  exit
-  813  ll
-  814  vi
-  815  vb
-  816  sb
-  817  vb
-  818  sb
-  819  vb
-  820  sb
-  821  vb
-  822  sb
-  823  ll
-  824  vb
-  825  sb
-  826  vb
-  827  sb
-  828  exit
-  829  ll
-  830  vb
-  831  sb
-  832  exit
-  833  vb
-  834  sb
-  835  source .bashrc 
-  836  lk
-  837  ll
-  838  la
-  839  vb
-  840  sb
-  841  vb
-  842  sb
-  843  ll
-  844  vb
-  845  sb
-  846  exit
-  847  ll
-  848  z /usr/local/src
-  849  ll
-  850  cd curl/
-  851  ll
-  852  ifconfig 
-  853  s
-  854  ll
-  855  git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt
-  856  ll
-  857  cd sexy-bash-prompt/
-  858  ll
-  859  make install
-  860  cd
-  861  source .bashrc 
-  862  ll
-  863  vb
-  864  sb
-  865  ll
-  866  cd
-  867  la
-  868  vb
-  869  ll
-  870  mv .bash_prompt .bash_prompt.bak
-  871  ll
-  872  sb
-  873  ll
-  874  cd /usr/local/src/sexy-bash-prompt/
-  875  ll
-  876  cd
-  877  vb
-  878  ll
-  879  sb
-  880  vb
-  881  ln -sfn /usr/local/src/sexy-bash-prompt/.bash_prompt ~/.bash_prompt
-  882  sb
-  883  ll
-  884  c
-  885  ll
-  886  cd /usr/local/src/
-  887  cd sexy-bash-prompt/
-  888  cd
-  889  exit
-  890  cd /usr/local/src/
-  891  ll
-  892  cd sexy-bash-prompt/
-  893  s
-  894  ll
-  895  cd bash-git-prompt/
-  896  s
-  897  cd node/
-  898  git checkout master
-  899  s
-  900  cd vim/
-  901  ll
-  902  s
-  903  ll
-  904  cd git/
-  905  ll
-  906  vb
-  907  ll
-  908  cd
-  909  ll
-  910  cd dev/
-  911  ll
-  912  cd www/
-  913  ll
-  914  cd test/
-  915  ll
-  916  s
-  917  ll
-  918  cd
-  919  ll
-  920  mkdir tmp
-  921  ll
-  922  cd tmp/
-  923  ll
-  924  wget https://raw.githubusercontent.com/twolfson/sexy-bash-prompt/master/README.md
-  925  ll
-  926  cd
-  927  vi .vimrc tmp/README.md 
-  928  ll
-  929  vi .bashrc tmp/README.md 
-  930  sb
-  931  z /usr/local/src
-  932  ll
-  933  cd git/
-  934  ll
-  935  s
-  936  ll
-  937  cd git/
-  938  s
-  939  ll
-  940  cd
-  941  vi .bashrc tmp/README.md 
-  942  ll
-  943  sb
-  944  ll
-  945  cd dev/
-  946  ll
-  947  cd cd
-  948  cd tmp
-  949  s
-  950  cd tmp/
-  951  ll
-  952  rmf README.md 
-  953  ll
-  954  mkd gitest
-  955  cd
-  956  rmf .bash_prompt.bak 
-  957  ll
-  958  vi .bash_aliases 
-  959  sb
-  960  cd tmp/
-  961  mkd gitest
-  962  ll
-  963  git init
-  964  cd
-  965  vb
-  966  sb
-  967  cd tmp/gitest/
-  968  cd
-  969  vb
-  970  sb
-  971  cd tmp/gitest/
-  972  ll
-  973  touch test.{txt,c,sh,php,vim,sql,lua,py,doc,xls}
-  974  ll
-  975  cd
-  976  vb
-  977  sb
-  978  cd tmp/gitest/
-  979  ll
-  980  cd
-  981  vb
-  982  sb
-  983  cd tmp/gitest/
-  984  ll
-  985  cd
-  986  cd tmp/gitest/
-  987  vb
-  988  sb
-  989  ll
-  990  tput staf 5
-  991  vb
-  992  sb
-  993  ll
-  994  git add test.c
-  995  git commit -m "commit test.c"
-  996  z /usr/local/src
-  997  ll
-  998  git clone https://github.com/trap00r/LS_COLORS.git
-  999  git clone https://github.com/trapOOr/LS_COLORS.git
- 1000  ll
- 1001  git clone https://github.com/trap00r/LS_COLORS.git
- 1002  h
- 1003  vi /home/vagrant/.bash_aliases 
- 1004  sb
- 1005  hgrep clone
- 1006  git clone git://github.com/trapd00r/LS_COLORS.git
- 1007  ll
- 1008  cd LS_COLORS/
- 1009  ll
- 1010  vb
- 1011  vi /home/vagrant/.bash_aliases 
- 1012  vb
- 1013  cd
- 1014  la
- 1015  ln -sfn /usr/local/src/LS_COLORS/LS_COLORS ~/.dircolors
- 1016  vb
- 1017  sb
- 1018  ll
- 1019  vb
- 1020  sb
- 1021  vb
- 1022  sb
- 1023  ll
- 1024  la
- 1025  cd /usr/share/terminfo/
- 1026  ll
- 1027  cd x/
- 1028  ll
- 1029  z /usr/
- 1030  z /usr/local/src
- 1031  ll
- 1032  git clone git://github.com/seebi/dircolors-solarized.git
- 1033  cd dircolors-solarized/
- 1034  ll
- 1035  cd
- 1036  ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-dark ~/.dircolors
- 1037  sb
- 1038  ll
- 1039  cd tmp/gitest/.git/
- 1040  s
- 1041  ll
- 1042  pushd ~
- 1043  ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-light ~/.dircolors
- 1044  sb
- 1045  ll
- 1046  ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-universal ~/.dircolors
- 1047  sb
- 1048  ll
- 1049  popd 
- 1050  ll
- 1051  cd
- 1052  ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-dark ~/.dircolors
- 1053  sb
- 1054  ll
- 1055  la
- 1056  ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-light ~/.dircolors
- 1057  ll
- 1058  sb
- 1059  ll
- 1060  lk
- 1061  la
- 1062  cd tmp/gitest/.git/
- 1063  s
- 1064  ll
- 1065  z /usr/local/src
- 1066  ll
- 1067  mkdir dircolors
- 1068  ll
- 1069  mv LS_COLORS/ dircolors-solarized/ dircolors
- 1070  ll
- 1071  mkdir bash-prompt
- 1072  mv sexy-bash-prompt/ bash-git-prompt/ bash-prompt/
- 1073  ll
- 1074  mkdir zsh-prompt
- 1075  mv zprezto/ zsh-prompt/
- 1076  ll
- 1077  cd
- 1078  lk
- 1079  ln -sfn /usr/local/src/bash-prompt/bash-git-prompt/ ~/.bash-git-prompt 
- 1080  ln -sfn /usr/local/src/bash-prompt/sexy-bash-prompt/.bash_prompt ~/.bash_prompt 
- 1081  ln -sfn /usr/local/src/dircolors/dircolors-solarized/dircolors.ansi-light ~/.dircolors 
- 1082  ll
- 1083  rmf .zprezto
- 1084  mv .zprezto.link .zprezto
- 1085  ln -sfn /usr/local/src/zsh-prompt/zprezto/ ~/.zprezto
- 1086  ll
- 1087  sb
- 1088  ll
- 1089  z /usr/local/src
- 1090  ll
- 1091  cd dircolors/dircolors-solarized/
- 1092  ll
- 1093  git branch -a
- 1094  git checkout -b customize
- 1095  ll
- 1096  vi dircolors.ansi-light 
- 1097  l
- 1098  ll
- 1099  sb
- 1100  ll
- 1101  vi dircolors.ansi-light 
- 1102  sb
- 1103  ll
- 1104  vi dircolors.ansi-light 
- 1105  sb
- 1106  ll
- 1107  pushd ~/
- 1108  ll
- 1109  popd 
- 1110  vi dircolors.ansi-light 
- 1111  sb
- 1112  pushd ~/
- 1113  ll
- 1114  popd 
- 1115  vi dircolors.ansi-light 
- 1116  sb
- 1117  pushd ~/
- 1118  ll
- 1119  cd /
- 1120  ll
- 1121  cd /var/cache/apt/
- 1122  ll
- 1123  cd archives/
- 1124  ll
- 1125  sudo apt-get clean
- 1126  ll
- 1127  cd
- 1128  df
- 1129  sudo -i
- 1130  ll
- 1131  z /usr/local/src
- 1132  ll
- 1133  mkd test
- 1134  ll
- 1135  s
- 1136  ll
- 1137  rmf test/
- 1138  ll
- 1139  cd bash-prompt/
- 1140  ll
- 1141  cd
- 1142  chmod 700 .ssh/
- 1143  chmod 600 .ssh/authorized_keys 
- 1144  chown -R vagrant:vagrant .ssh/
- 1145  sudo -i
- 1146  ll
- 1147  sudo find /usr/share/locale/* -maxdepth 1 -type d ! -name "fr*" ! -name "en*" -exec rm -rf {} \;
- 1148  cd /usr/share/locale/
- 1149  ll
- 1150  cd /usr/src/
- 1151  ll
- 1152  cd
- 1153  ll
- 1154  mv dev/ code
- 1155  ll
- 1156  cd code/
- 1157  ll
- 1158  mkdir personal
- 1159  ll
- 1160  mkdir others
- 1161  ll
- 1162  mv www/ personal/
- 1163  ll
- 1164  cd others/
- 1165  ll
- 1166  mkdir github.com
- 1167  ll
- 1168  z /usr/
- 1169  cd local/src/
- 1170  ll
- 1171  git clone https://github.com/github/hub.git
- 1172  ll
- 1173  cd hub/
- 1174  ll
- 1175  script/build 
- 1176  s
- 1177  ll
- 1178  git clone https://github.com/golang/go.git
- 1179  ll
- 1180  s
- 1181  ll
- 1182  ln -s src/go/ ./go
- 1183  ll
- 1184  vb
- 1185  ll
- 1186  sb
- 1187  ll
- 1188  vb
- 1189  echo $TERM
- 1190  vb
- 1191  sb
- 1192  ll
- 1193  vb
- 1194  sb
- 1195  ll
- 1196  cd src/
- 1197  ll
- 1198  cd hub/
- 1199  script/build 
- 1200  exit
- 1201  z /usr/
- 1202  cd local/src/
- 1203  cd hub/
- 1204  s
- 1205  cd go/
- 1206  ll
- 1207  git tag
- 1208  ll
- 1209  cd src/
- 1210  ll
- 1211  sudo ./all.bash 
- 1212  sudo -i
- 1213  ll
- 1214  ./all.bash 
- 1215  sudo ./all.bash 
- 1216  ./make.bash 
- 1217  s
- 1218  cd src/go/
- 1219  ll
- 1220  cd src/
- 1221  sudo ./make.bash 
- 1222  ll
- 1223  ls
- 1224  sudo ./all.bash 
- 1225  git tag | less
- 1226  git checkout go1.4
- 1227  ll
- 1228  sudo ./all.bash 
- 1229  ll
- 1230  ls
- 1231  go --version
- 1232  ls
- 1233  sudo ./all.bash > go.txt
- 1234  vi go.txt 
- 1235  rmf go.txt 
- 1236  ll
- 1237  sudo apt-cache search golang
- 1238  sudo apt-cache policy golang
- 1239  sudo apt-get install golang
- 1240  s
- 1241  ll
- 1242  s
- 1243  ll
- 1244  cd hub/
- 1245  ll
- 1246  script/build 
- 1247  sudo script/build 
- 1248  ll
- 1249  cd script/
- 1250  ll
- 1251  su
- 1252  go version
- 1253  ll
- 1254  su
- 1255  hgrep golang
- 1256  hgrep install
- 1257  sudo apt-get remove golang --purge
- 1258  sudo apt-get autoremove 
- 1259  ll
- 1260  sudo shutdown -h now
- 1261  z /usr/
- 1262  cd local/src/
- 1263  cd hub/
- 1264  s
- 1265  cd go/
- 1266  ll
- 1267  git tag
- 1268  ll
- 1269  cd src/
- 1270  ll
- 1271  sudo ./all.bash 
- 1272  sudo -i
- 1273  ll
- 1274  ./all.bash 
- 1275  sudo ./all.bash 
- 1276  ./make.bash 
- 1277  s
- 1278  cd src/go/
- 1279  ll
- 1280  cd src/
- 1281  sudo ./make.bash 
- 1282  ll
- 1283  ls
- 1284  sudo ./all.bash 
- 1285  git tag | less
- 1286  git checkout go1.4
- 1287  ll
- 1288  sudo ./all.bash 
- 1289  ll
- 1290  ls
- 1291  go --version
- 1292  ls
- 1293  sudo ./all.bash > go.txt
- 1294  vi go.txt 
- 1295  rmf go.txt 
- 1296  ll
- 1297  sudo apt-cache search golang
- 1298  sudo apt-cache policy golang
- 1299  sudo apt-get install golang
- 1300  s
- 1301  ll
- 1302  s
- 1303  ll
- 1304  cd hub/
- 1305  ll
- 1306  script/build 
- 1307  sudo script/build 
- 1308  ll
- 1309  cd script/
- 1310  ll
- 1311  su
- 1312  go version
- 1313  ll
- 1314  su
- 1315  hgrep golang
- 1316  hgrep install
- 1317  sudo apt-get remove golang --purge
- 1318  sudo apt-get autoremove 
- 1319  ll
- 1320  sudo shutdown -h now
- 1321  z /usr/
- 1322  cd local/src/
- 1323  cd hub/
- 1324  s
- 1325  cd go/
- 1326  ll
- 1327  git tag
- 1328  ll
- 1329  cd src/
- 1330  ll
- 1331  sudo ./all.bash 
- 1332  sudo -i
- 1333  ll
- 1334  ./all.bash 
- 1335  sudo ./all.bash 
- 1336  ./make.bash 
- 1337  s
- 1338  cd src/go/
- 1339  ll
- 1340  cd src/
- 1341  sudo ./make.bash 
- 1342  ll
- 1343  ls
- 1344  sudo ./all.bash 
- 1345  git tag | less
- 1346  git checkout go1.4
- 1347  ll
- 1348  sudo ./all.bash 
- 1349  ll
- 1350  ls
- 1351  go --version
- 1352  ls
- 1353  sudo ./all.bash > go.txt
- 1354  vi go.txt 
- 1355  rmf go.txt 
- 1356  ll
- 1357  sudo apt-cache search golang
- 1358  sudo apt-cache policy golang
- 1359  sudo apt-get install golang
- 1360  s
- 1361  ll
- 1362  s
- 1363  ll
- 1364  cd hub/
- 1365  ll
- 1366  script/build 
- 1367  sudo script/build 
- 1368  ll
- 1369  cd script/
- 1370  ll
- 1371  su
- 1372  go version
- 1373  ll
- 1374  su
- 1375  hgrep golang
- 1376  hgrep install
- 1377  sudo apt-get remove golang --purge
- 1378  sudo apt-get autoremove 
- 1379  ll
- 1380  sudo shutdown -h now
- 1381  ll
- 1382  sudo apt-get update
- 1383  sudo apt-get install nginx
- 1384  sudo service nginx start
- 1385  ifconfig eth0 | grep inet | awk '{ print $2 }'
- 1386  curl 'http://localhost:80'
- 1387  netstat -tnlp
- 1388  lsmod | grep vbox
- 1389  sudo shutdown -h now
- 1390  ll
- 1391  sudo apt-get update
- 1392  sudo apt-get install nginx
- 1393  sudo service nginx start
- 1394  ifconfig eth0 | grep inet | awk '{ print $2 }'
- 1395  curl 'http://localhost:80'
- 1396  netstat -tnlp
- 1397  lsmod | grep vbox
- 1398  sudo shutdown -h now
- 1399  ll
- 1400  sudo shutdown -h now
- 1401  ll
- 1402  sudo shutdown -h now
- 1403  dmesg 
- 1404  dmesg | less
- 1405  ll
- 1406  sudo shutdown -h now
- 1407  dmesg 
- 1408  dmesg | less
- 1409  ll
- 1410  sudo shutdown -h now
- 1411  ll
- 1412  sudo shutdown -r now
- 1413  ll
- 1414  sudo shutdown -r now
- 1415  sudo shutdown -h now
- 1416  sudo shutdown -h now
- 1417  ll
- 1418  sudo reboot
- 1419  ll
- 1420  sudo reboot
- 1421  sudo vim /etc/default/grub 
- 1422  sudo update-grub
- 1423  sudo reboot
- 1424  sudo vim /etc/default/grub 
- 1425  sudo update-grub
- 1426  sudo reboot
- 1427  sudo vim /etc/default/grub 
- 1428  sudo update-grub
- 1429  sudo reboot
- 1430  sudo vim /etc/default/grub 
- 1431  sudo update-grub
- 1432  sudo reboot
- 1433  sudo shutdown -h now
- 1434  sudo shutdown -h now
- 1435  ifconfig 
- 1436  ifconfig -a
- 1437  sudo vi /etc/network/interfaces 
- 1438  sudo vim /etc/network/interfaces 
- 1439  ifconfig -a
- 1440  ifconfig -a|less
- 1441  sudo vim /etc/network/interfaces 
- 1442  cd /etc/network/
- 1443  ll
- 1444  sudo cp interfaces interfaces.old
- 1445  sudo vim /etc/network/interfaces 
- 1446  sudo service networking restart 
- 1447  sudo ifconfig -a
- 1448  sudo shutdown -r now
- 1449  ifconfig 
- 1450  ifconfig -a
- 1451  sudo vi /etc/network/interfaces 
- 1452  sudo vim /etc/network/interfaces 
- 1453  ifconfig -a
- 1454  ifconfig -a|less
- 1455  sudo vim /etc/network/interfaces 
- 1456  cd /etc/network/
- 1457  ll
- 1458  sudo cp interfaces interfaces.old
- 1459  sudo vim /etc/network/interfaces 
- 1460  sudo service networking restart 
- 1461  sudo ifconfig -a
- 1462  sudo shutdown -r now
- 1463  ifconfig 
- 1464  ifconfig -a
- 1465  sudo vi /etc/network/interfaces 
- 1466  sudo vim /etc/network/interfaces 
- 1467  ifconfig -a
- 1468  ifconfig -a|less
- 1469  sudo vim /etc/network/interfaces 
- 1470  cd /etc/network/
- 1471  ll
- 1472  sudo cp interfaces interfaces.old
- 1473  sudo vim /etc/network/interfaces 
- 1474  sudo service networking restart 
- 1475  sudo ifconfig -a
- 1476  sudo shutdown -r now
- 1477  dmesg 
- 1478  ping -c4 192.168.0.1
- 1479  ping -c4 google.com
- 1480  sudo ifconfig -a | less
- 1481  sudo vim /etc/network/interfaces 
- 1482  sudo service networking restart 
- 1483  ping -c4 192.168.0.1
- 1484  sudo shutdown -r now
- 1485  dmesg 
- 1486  ping -c4 192.168.0.1
- 1487  ping -c4 google.com
- 1488  sudo ifconfig -a | less
- 1489  sudo vim /etc/network/interfaces 
- 1490  sudo service networking restart 
- 1491  ping -c4 192.168.0.1
- 1492  sudo shutdown -r now
- 1493  ping -c4 192.168.0.1
- 1494  sudo ifdown eth0
- 1495  ping -c4 192.168.0.1
- 1496  sudo ifup eth1
- 1497  ping -c4 192.168.0.1
- 1498  sudo vim /etc/network/interfaces 
- 1499  sudo service networking restart 
- 1500  sudo ifconfig -a | less
- 1501  sudo shutdown -r now
- 1502  ping -c4 192.168.0.1
- 1503  sudo ifdown eth0
- 1504  ping -c4 192.168.0.1
- 1505  sudo ifup eth1
- 1506  ping -c4 192.168.0.1
- 1507  sudo vim /etc/network/interfaces 
- 1508  sudo service networking restart 
- 1509  sudo ifconfig -a | less
- 1510  sudo shutdown -r now
- 1511  sudo ifconfig -a | less
- 1512  cd /etc/network/
- 1513  ll
- 1514  sudo mv interfaces interfaces.test
- 1515  sudo mv interfaces.old interfaces
- 1516  ll
- 1517  sudo shutdown -h now
- 1518  sudo ifconfig -a | less
- 1519  cd /etc/network/
- 1520  ll
- 1521  sudo mv interfaces interfaces.test
- 1522  sudo mv interfaces.old interfaces
- 1523  ll
- 1524  sudo shutdown -h now
- 1525  sudo ifconfig -a | less
- 1526  cd /etc/network/
- 1527  ll
- 1528  sudo mv interfaces interfaces.test
- 1529  sudo mv interfaces.old interfaces
- 1530  ll
- 1531  sudo shutdown -h now
- 1532  cd .ssh/
- 1533  ll
- 1534  sudo shutdown -h now
- 1535  cd .ssh/
- 1536  ll
- 1537  sudo shutdown -h now
- 1538  cd .ssh/
- 1539  ll
- 1540  cd
- 1541  rm -rf .ssh/
- 1542  ll
- 1543  la
- 1544  ll
- 1545  ssh-add -l
- 1546  sudo apt-get remove openssh-server openssh-client
- 1547  sudo apt-get autoremove
- 1548  sudo shutdown -r now
- 1549  cd .ssh/
- 1550  ll
- 1551  cd
- 1552  rm -rf .ssh/
- 1553  ll
- 1554  la
- 1555  ll
- 1556  ssh-add -l
- 1557  sudo apt-get remove openssh-server openssh-client
- 1558  sudo apt-get autoremove
- 1559  sudo shutdown -r now
- 1560  ll
- 1561  exit
- 1562  ll
- 1563  mkd ~/.ssh
- 1564  ll
- 1565  chmod 700 ~/.ssh/
- 1566  ll
- 1567  s
- 1568  ll
- 1569  la
- 1570  lk
- 1571  la
- 1572  vi .vimrc 
- 1573  ll
- 1574  ll .ssh/
- 1575  ll .ss*
- 1576  ll
- 1577  curl 'http://localhost'
- 1578  ll
- 1579  cd .ssh/
- 1580  ll
- 1581  cat authorized_keys 
- 1582  ll
- 1583  exit
- 1584  cd /etc/ssh/
- 1585  ll
- 1586  s
- 1587  rmf ./ssh/
- 1588  sudo rmf ./ssh/
- 1589  sudo rm -rf ./ssh/
- 1590  ll
- 1591  sudo apt-get install openssh-server openssh-client
- 1592  sudo service ssh restart
- 1593  z /usr/
- 1594  cd local/src/
- 1595  ll
- 1596  s
- 1597  ll
- 1598  cd go/
- 1599  ll
- 1600  cd src/
- 1601  ll
- 1602  ls
- 1603  sudo ./all.bash 
- 1604  cd /usr/share/
- 1605  ll
- 1606  cd doc
- 1607  ll
- 1608  c
- 1609  ls
- 1610  man ls
- 1611  ll
- 1612  sudo apt-get clean 
- 1613  du -sh /
- 1614  sudo du -sh /
- 1615  ll
- 1616  sudo shutdown -h now
- 1617  ll
- 1618  sudo shutdown -h now
- 1619  ll
- 1620  curl 'http://localhost'
- 1621  sudo ifconfig -a | grep eth
- 1622  sudo ifconfig -a | grep addr
- 1623  sudo ifconfig -a | less
- 1624  cd /etc/network/
- 1625  ll
- 1626  mv interfaces interfaces.old
- 1627  sudo mv interfaces interfaces.old
- 1628  sudo vi interfaces
- 1629  ll
- 1630  sudo cp interfaces.test interfaces
- 1631  sudo vi interfaces
- 1632  sudo vim interfaces
- 1633  sudo service networking restart 
- 1634  sudo ifconfig -a | less
- 1635  sudo shutdown -h now
- 1636  ll
- 1637  sudo ifconfig -a | less
- 1638  ping -c4 192.168.56.101
- 1639  sudo vim /etc/network/interfaces
- 1640  sudo iptables -L
- 1641  sudo shutdown -r now
- 1642  ll
- 1643  ping -c4 192.168.56.101
- 1644  ifconfig 
- 1645  exit
- 1646  sudo apt-cache search hub
- 1647  sudo apt-get install hub
- 1648  sudo shutdown -h now
- 1649  ll
- 1650  ifconfig 
- 1651  curl 'http://192.168.56.101'
- 1652  curl 'http://10.0.2.15'
- 1653  sudo route
- 1654  sudo service iptabbles stop
- 1655  sudo apt-cache search mariadb
- 1656  sudo apt-cache search percona
- 1657  cd /etc/apt/
- 1658  cd sources.list.d/
- 1659  ll
- 1660  ca dotdeb.list >> ../sources.list
- 1661  sudo cat dotdeb.list >> ../sources.list
- 1662  sudo -i
- 1663  ll
- 1664  s
- 1665  sudo vim sources.list
- 1666  cd sources.list.d/
- 1667  ll
- 1668  vi percona-server.list
- 1669  sudo vi percona-server.list
- 1670  sudo vim percona-server.list
- 1671  q
- 1672  sudo -i
- 1673  ll
- 1674  sudo vim percona-server.list
- 1675  ll
- 1676  sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
- 1677  sudo vim /etc/apt/preferences.d/00percona.pref
- 1678  sudo apt-get update
- 1679  sudo apt-cache search percona
- 1680  sudo apt-cache search percona-server
- 1681  sudo apt-get install php5-curl php5-xmlrpc php5-gd php5-intl  php5 php5-common php5-dev php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-mysql php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy
- 1682  sudo apt-get install php5-curl php5-xmlrpc php5-gd php5 php5-common php5-dev php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache  php5-mysql php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy
- 1683  cd /usr/share/nginx/www/
- 1684  ll
- 1685  sudo vim info.php
- 1686  sudo service nginx restart
- 1687  sudo apt-get remove
- 1688  sudo apt-get remove nginx
- 1689  sudo apt-get install apache2
- 1690  cd /usr/share/nginx/
- 1691  ll
- 1692  cd www/
- 1693  ll
- 1694  sudo cp info.php /var/www/
- 1695  sudo apt-get install libapache2-mod-php5
- 1696  sudo apt-get autoremove
- 1697  sudo service apache2 restart
- 1698  sudo update-rc.d apache2 enable
- 1699  sudo service apache2 restart
- 1700  curl 'http://localhost'
- 1701  curl 'http://localhost/info.php'
- 1702  sudo shutdown -r now
- 1703  sudo lsb_release -a
- 1704  cd /etc/apt/sources.list.d/
- 1705  ll
- 1706  sudo vim mariadb.list
- 1707  ll
- 1708  sudo apt-get install python-software-properties
- 1709  sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
- 1710  sudo add-apt-repository 'deb http://nwps.ws/pub/mariadb/repo/10.0/debian wheezy main'
- 1711  sudo apt-get update
- 1712  sudo apt-get install mariadb-server
- 1713  ll
- 1714  s
- 1715  ll
- 1716  vi sources.list
- 1717  sudo vim sources.list
- 1718  ll
- 1719  cd sources.list.d/
- 1720  ll
- 1721  sudo -i
- 1722  curl 'http://localhost/info.php'
- 1723  curl 'http://localhost/'
- 1724  cd /var/www/
- 1725  ll
- 1726  php -i
- 1727  telnet yonitg.com 80
- 1728  ll
- 1729  telnet localhost 80
- 1730  ifconfig 
- 1731  su
- 1732  exit
- 1733  vi .bashrc 
- 1734  exit
- 1735  lastlog 
- 1736  su
- 1737  sb
- 1738  q
- 1739  vi .bashrc 
- 1740  sb
- 1741  ll
- 1742  q
- 1743  h
- 1744  h > provision.sh
- 1745  vi provision.sh 
- 1746  cp provision.sh provision.sh.bak 
- 1747  vi provision.sh 
- 1748  su
- 1749  sb
- 1750  cd tmp/gitest/
- 1751  su
- 1752  q
- 1753  exit
- 1754  vi .vimrc 
- 1755  vi .bash_aliases 
- 1756  q
- 1757  vi .bashrc 
- 1758  c
- 1759  sb
- 1760  w
- 1761  touch .hushlogin
- 1762  ll
- 1763  vi .bashrc 
- 1764  sb
- 1765  su
- 1766  vi .bashrc 
- 1767  ll
- 1768  sb
- 1769  cd tmp/gitest/.git/
- 1770  sb
- 1771  ll
- 1772  sb
- 1773  c
- 1774  sb
- 1775  ll
- 1776  sb
- 1777  c
- 1778  ll
- 1779  cd
- 1780  vi .vimrc 
- 1781  ll
- 1782  vi .gitconfig
- 1783  ll
- 1784  cd code/
- 1785  ll
- 1786  cd personal/
- 1787  ll
- 1788  mkdir -p github.com/dotfiles
- 1789  ll
- 1790  cd
- 1791  ll
- 1792  la
- 1793  ll
- 1794  cd code/personal/
- 1795  ll
- 1796  cd www/
- 1797  ll
- 1798  mkdir -p home sites
- 1799  ll
- 1800  cd sites/
- 1801  vi site.sh
- 1802  ll
- 1803  chmod +x site.sh 
- 1804  ./site.sh christian-achille.com
- 1805  ll
- 1806  sudo apt-get install tree
- 1807  c
- 1808  ll
- 1809  tree christian-achille.com/
- 1810  ll
- 1811  su
- 1812  hgrep php5-
- 1813  sudo apt-get install php5-gd php5-curl php5-dev php-pear php5-imagick php5-mcrypt
- 1814  sudo service apache2 restart
- 1815  ll
- 1816  su
- 1817  popd 
- 1818  vi
- 1819  ll
- 1820  sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
- 1821  sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache  php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
- 1822  ll
- 1823  sudo service apache2 restart 
- 1824  sudo apt-get install mariadb-server mariadb-client
- 1825  su
- 1826  mysql -u root -p
- 1827  sudo service mysql restart
- 1828  su
- 1829  ll
- 1830  ifconfig 
- 1831  ping -c4 192.168.0.1
- 1832  ping -c4 192.168.0.12
- 1833  ping -c4 192.168.56.101
- 1834  curl 'http://localhost'
- 1835  curl 'http://localhost/info.php'
- 1836  ll
- 1837  su
- 1838  ll
- 1839  q
- 1840  cd code/personal/www/sites/example.com/wwwroot/
- 1841  pwd
- 1842  s
- 1843  ll
- 1844  s
- 1845  ll
- 1846  touch maintenance.html
- 1847  ll
- 1848  mv example.com/ examplejs.com/
- 1849  ll
- 1850  mv examplejs.com/ example.js.com/
- 1851  ll
- 1852  mv example.js.com/ examplejs.com/
- 1853  ll
- 1854  vi maintenance.html 
- 1855  su
- 1856  ll
- 1857  cd examplejs.com/wwwroot/
- 1858  ll
- 1859  touch index.html
- 1860  cp ../../maintenance.html index.html
- 1861  ll
- 1862  vi index.html 
- 1863  s
- 1864  ll
- 1865  vi maintenance.html 
- 1866  su
- 1867  ll
- 1868  sudo mkdir /var/run/forever
- 1869  cd /var/www/
- 1870  ll
- 1871  cat /etc/group | grep www
- 1872  sudo usermod -a -G www-data vagrant
- 1873  sudo chown -R root:www-data /var/www/
- 1874  sudo chmod -R 775 /var/www/
- 1875  ll
- 1876  rm index.html 
- 1877  ll
- 1878  rm -F index.html 
- 1879  rmf index.html 
- 1880  q
- 1881  ll
- 1882  su
- 1883  cd 
- 1884  cd code/personal/www/sites/
- 1885  ll
- 1886  ./site.sh example.com
- 1887  ll
- 1888  tree example.com/
- 1889  su
- 1890  cd 
- 1891  cd bin/
- 1892  ll
- 1893  cd
- 1894  cd .dotfiles/scripts/
- 1895  ll
- 1896  mv site.sh create-site.sh
- 1897  ll
- 1898  cd
- 1899  cd bin/
- 1900  ll
- 1901  ln -sfn ~/.dotfiles/scripts/create-site.sh ./create-site
- 1902  ll
- 1903  rm site.sh 
- 1904  ll
- 1905  c
- 1906  ll
- 1907  vi create-site 
- 1908  ll
- 1909  vi create-site 
- 1910  cd /var/www/
- 1911  ll
- 1912  c
- 1913  create-site dev.com mysite.com test.com angular.com blog.com
- 1914  ll
- 1915  tree mysite.com/
- 1916  echo $USER
- 1917  vi /home/vagrant/bin/create-site 
- 1918  ll
- 1919  su
- 1920  ll
- 1921  vi /home/vagrant/bin/create-site 
- 1922  ll
- 1923  vi /home/vagrant/bin/create-site 
- 1924  ll
- 1925  exit
- 1926  ll
- 1927  exit
- 1928  ll
- 1929  cd /var/www/
- 1930  ll
- 1931  mkd example
- 1932  ll
- 1933  s
- 1934  ll
- 1935  rmf example/
- 1936  ll
- 1937  sudo rmf index.html 
- 1938  sudo rm index.html 
- 1939  ll
- 1940  sudo mv info.php index.php
- 1941  ll
- 1942  sudo rm index.php 
- 1943  ll
- 1944  vi index.php
- 1945  ll
- 1946  cp -a ~/code/personal/www/sites/ .
- 1947  ll
- 1948  rmf sites/
- 1949  ll
- 1950  cp -a ~/code/personal/www/sites/examplejs.com/ .
- 1951  ll
- 1952  cp -a ~/code/personal/www/sites/site.sh .
- 1953  ll
- 1954  pushd ~
- 1955  ll
- 1956  la
- 1957  ln -s ~/code/personal/github.com/dotfiles/ ~/.dotfiles
- 1958  ll
- 1959  cd .dotfiles
- 1960  ll
- 1961  mkdir scripts
- 1962  ll
- 1963  popd 
- 1964  ll
- 1965  mv site.sh ~/.dotfiles/scripts/
- 1966  cd
- 1967  cd bin/
- 1968  ln -s ~/.dotfiles/scripts/site.sh 
- 1969  ll
- 1970  vi site.sh 
- 1971  cd /var/www/
- 1972  ll
- 1973  site.sh test.com
- 1974  ll
- 1975  tree test.com/
- 1976  ll
- 1977  cd
- 1978  cd bin/
- 1979  vi site.sh 
- 1980  ll
- 1981  c
- 1982  ll
- 1983  cd /var/www/
- 1984  ll
- 1985  rmf test.com/
- 1986  c
- 1987  create-site test.com
- 1988  ll
- 1989  cd test.com/
- 1990  ll
- 1991  cd public/
- 1992  ll
- 1993  s
- 1994  ll
- 1995  create-site test.com
- 1996  rmf test.com/
- 1997  ll
- 1998  create-site test.com
- 1999  ll
- 2000  create-site test.com
- 2001  rmf test.com/
- 2002  ll
- 2003  create-site test.com
- 2004  ll
- 2005  tree test.com/
- 2006  ll
- 2007  rmf test.com/
- 2008  c
- 2009  create-site test.com
- 2010  tree test.com/
- 2011  ll
- 2012  touch test.com/public/pages/blog/blog_itm1.html
- 2013  rmf test.com/
- 2014  ll
- 2015  c
- 2016  create-site test.com
- 2017  ll
- 2018  tree test.com/
- 2019  ll
- 2020  rmf test.com/
- 2021  c
- 2022  create-site test.com
- 2023  tree test.com/
- 2024  rmf test.com/
- 2025  ll
- 2026  c
- 2027  create-site test.com
- 2028  tree test.com/
- 2029  tree test.com/ | less
- 2030  rmf test.com/
- 2031  c
- 2032  create-site test.com
- 2033  tree test.com/
- 2034  ll
- 2035  c
- 2036  create-site mysite.com
- 2037  tree mysite.com/
- 2038  cd mysite.com/
- 2039  ll
- 2040  cd public/
- 2041  ls
- 2042  s
- 2043  ll
- 2044  s
- 2045  ll
- 2046  rmf mysite.com/
- 2047  ll
- 2048  create-site mysite.com
- 2049  tree mysite.com/
- 2050  ll
- 2051  rmf mysite.com/ test.com/
- 2052  ll
- 2053  create-site mysite.com
- 2054  tree mysite.com/
- 2055  cd mysite.com/
- 2056  ll
- 2057  cd assets/
- 2058  ll
- 2059  s
- 2060  ll
- 2061  rmf mysite.com/
- 2062  create-site mysite.com
- 2063  cd mysite.com/
- 2064  ll
- 2065  cd assets/
- 2066  ll
- 2067  s
- 2068  rmf mysite.com/
- 2069  create-site mysite.com
- 2070  rmf mysite.com/
- 2071  create-site mysite.com
- 2072  rmf mysite.com/
- 2073  create-site mysite.com
- 2074  vi /home/vagrant/.bashrc 
- 2075  ll
- 2076  rmf mysite.com/
- 2077  create-site mysite.com
- 2078  sb
- 2079  rmf mysite.com/
- 2080  create-site mysite.com
- 2081  rmf mysite.com/
- 2082  create-site mysite.com
- 2083  rmf mysite.com/
- 2084  create-site mysite.com
- 2085  tree mysite.com/
- 2086  rmf mysite.com/
- 2087  create-site mysite.com
- 2088  tree mysite.com/
- 2089  ll
- 2090  rmf mysite.com/
- 2091  create-site mysite.com
- 2092  rmf mysite.com/
- 2093  create-site mysite.com
- 2094  rmf mysite.com/
- 2095  create-site mysite.com
- 2096  rmf mysite.com/
- 2097  create-site mysite.com
- 2098  rmf mysite.com/
- 2099  create-site mysite.com
- 2100  ll
- 2101  cd mysite.com/
- 2102  ll
- 2103  cd public/
- 2104  ll
- 2105  s
- 2106  ll
- 2107  rmf mysite.com/
- 2108  ll
- 2109  create-site mysite.com dev.site.com test_angular.com
- 2110  ll
- 2111  rmf mysite.com/
- 2112  ll
- 2113  create-site mysite.com dev.site.com test_angular.com
- 2114  ll
- 2115  rmf dev.site.com/ mysite.com/ test_angular.com/
- 2116  ll
- 2117  create-site mysite.com dev.site.com test_angular.com
- 2118  ll
- 2119  tree dev.site.com/
- 2120  ll
- 2121  create-site mysite.com
- 2122  create-site mysite.com dev.site.com test_angular.com
- 2123  create-site mysite.com dev.site.com tata.com
- 2124  ll
- 2125  create-site mysite.com dev.site.com tata.com
- 2126  create-site tata.com
- 2127  ll
- 2128  cd tata.com/
- 2129  ll
- 2130  s
- 2131  ll
- 2132  cp ~/code/personal/www/sites/maintenance.html .
- 2133  ll
- 2134  cp examplejs.com/wwwroot/index.html .
- 2135  ll
- 2136  rmf examplejs.com/
- 2137  ll
- 2138  rmf dev.site.com/ mysite.com/ tata.com/ test_angular.com/
- 2139  ll
- 2140  create-site example.com
- 2141  ll
- 2142  cp index.html example.com/public/
- 2143  ll
- 2144  sudo shutdown -h now
- 2145  ll
- 2146  exit
- 2147  sudo shutdown -h now
- 2148  ll
- 2149  cd /mnt/
- 2150  ll
- 2151  mount
- 2152  df
- 2153  mkd mac_localhost
- 2154  ll
- 2155  s
- 2156  ll
- 2157  cd /mnt/
- 2158  ll
- 2159  ls
- 2160  s
- 2161  ls
- 2162  cd
- 2163  ls
- 2164  cd /mnt/
- 2165  ll
- 2166  sudo mkd mac_localhost
- 2167  sudo mkdir mac_localhost
- 2168  ll
- 2169  sudo mount -t vboxsf localhost /mnt/mac_localhost/
- 2170  ll
- 2171  cd mac_localhost/
- 2172  ll
- 2173  s
- 2174  sudo mount -t vboxsf localhost /mnt/mac_localhost/
- 2175  ll
- 2176  cd mac_localhost/
- 2177  ll
- 2178  la
- 2179  sudo shutdown -h now
- 2180  ll
- 2181  hgrep mount
- 2182  sudo mount -t vboxsf localhost /mnt/mac_localhost/
- 2183  ll /mnt/mac_localhost/
- 2184  ll
- 2185  cd ./~
- 2186  ll
- 2187  s
- 2188  rmf ./~
- 2189  ll
- 2190  cd .ssh/
- 2191  ll
- 2192  cat authorized_keys 
- 2193  ll
- 2194  su
- 2195  q
- 2196  ll
- 2197  cd .ssh/
- 2198  ll
- 2199  q
- 2200  ll
- 2201  su
- 2202  ll
- 2203  cd .ssh/
- 2204  ll
- 2205  rmf authorized_keys 
- 2206  ll
- 2207  su
- 2208  ll
- 2209  cd .ssh/
- 2210  ll
- 2211  su
- 2212  ll
- 2213  cd /media/
- 2214  ll
- 2215  s
- 2216  cd /mnt/mac_localhost/
- 2217  ll
- 2218  s
- 2219  ll
- 2220  rmf mac_localhost/
- 2221  sudo rmf mac_localhost/
- 2222  sudo rm -rf mac_localhost/
- 2223  ll
- 2224  su
- 2225  q
- 2226  ll
- 2227  vi
- 2228  ll
- 2229  sudo update-alternatives --config vi
- 2230  sudo update-alternatives --display 
- 2231  sudo update-alternatives --display editor
- 2232  vi
- 2233  sudo update-alternatives --display vi
- 2234  c
- 2235  sudo update-alternatives --list editor
- 2236  vim
- 2237  su
- 2238  cd /usr/local/src/vim/
- 2239  hg update default
- 2240  hg pull
- 2241  hg update
- 2242  cd src/
- 2243  make distclean
- 2244  make
- 2245  sudo make install
- 2246  vi
- 2247  vim
- 2248  cd
- 2249  vi .bashrc 
- 2250  vim .bashrc 
- 2251  vim .bash_aliases 
- 2252  sb
- 2253  vi
- 2254  su
- 2255  cd /usr/local/src/vim/
- 2256  make distclean 
- 2257  hgrep --with
- 2258  hgrep enable
- 2259  ./configure --with-features=huge --enable-perlinterp --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config --enable-rubyinterp
- 2260  sudo -s
- 2261  ll
- 2262  cd
- 2263  cd /var/www/
- 2264  ll
- 2265  su
- 2266  echo $TERM
- 2267  tset =q
- 2268  tset -q
- 2269  tput colors
- 2270  su
- 2271  sudo -S
- 2272  sudo -i
- 2273  cd .ssh/
- 2274  ll
- 2275  la
- 2276  vi authorized_keys
- 2277  exit
- 2278  ll
- 2279  sudo -S
- 2280  sudo -s
- 2281  q
- 2282  sudo -s
- 2283  q
- 2284  cd .ssh/
- 2285  ll
- 2286  rm authorized_keys 
- 2287  ll
- 2288  q
- 2289  sudo shutdown -h now
- 2290  ll
- 2291  la
- 2292  cd .dotfiles
- 2293  ll
- 2294  la
- 2295  cd
- 2296  ll
- 2297  vi .vimrc 
- 2298  ll
- 2299  git config user.name "Bill Linux"
- 2300  touch .gitconfig
- 2301  git config user.name "Bill Linux"
- 2302  rm .gitconfig 
- 2303  git config --global user.name "Bill Linux"
- 2304  git config --global user.email "b.linux@laposte.net"
- 2305  ll
- 2306  mkdir vagrant
- 2307  cd vagrant/
- 2308  echo "# vagrant" >> README.md
- 2309  git init
- 2310  git add README.md
- 2311  git commit -m "First commit"
- 2312  git remote add origin https://github.com/billinux/vagrant.git
- 2313  git push origin master
- 2314  mkd resources
- 2315  cd
- 2316  ll
- 2317  cp .bashrc .bash_aliases vagrant/resources/
- 2318  cp .vimrc vagrant/resources/
- 2319  vp .dotfiles/scripts/create-site.sh vagrant/resources/
- 2320  cp .dotfiles/scripts/create-site.sh vagrant/resources/
- 2321  cp /etc/apt/sources.list vagrant/resources/
- 2322  cp /etc/apache2/sites-available/example.com vagrant/resources/
- 2323  la
- 2324  cp provision.sh vagrant/resources/
- 2325  cp .hushlogin vagrant/resources/
- 2326  cp .gitconfig vagrant/resources/
- 2327  h
- 2328  h >> vagrant/resources/vagrant.history
+su -
+sudo visudo -f /etc/sudoers.d/vagrant
+su
+sudo apt-get -y update
+sudo apt-get -y install openssh-server
+mkdir ~/.ssh
+cd .ssh/
+su
+sudo groupadd admin
+sudo usermod -G admin vagrant
+sudo apt-get -y vim git-core
+sudo apt-get -y install  git-core
+sudo apt-get -y install vim
+sudo update-alternatives --config editor
+vi
+sudo hostname vagrant
+su
+sudo -i
+ll
+echo "export PATH=$PATH:/usr/sbin:/sbin" >> .bashrc 
+sb
+echo $PATH
+vb
+sb
+path
+c
+ll
+cp .bashrc .bash_profile
+vi .bash_profile 
+cp .bash_profile .bash_aliases
+vi .bashrc 
+vi .bashrc
+vi .bash_profile 
+ll
+cat .bashrc >> .bash_profile 
+vi .bash_profile 
+vi .bashrc
+mv .bash_aliases .aliases
+vi .aliases 
+source .bash_profile 
+ll
+la
+lk
+c
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+vb
+vi .aliases 
+source .bashrc 
+ll
+vb
+cd
+alias 
+vi .aliases 
+source .bashrc 
+source .bash_profile 
+vb
+vi .bash_profile 
+sb
+ll
+vi .aliases 
+exit
+cd
+ls -l
+ls -la
+mkdir local bin
+cd local/
+hg clone https://vim.googlecode.com/hg/ vim
+cd vim/
+ls
+hg pull
+hg update
+cd src/
+make
+sudo apt-get install ncurses
+sudo apt-get build-dep vim
+sudo apt-cache search ncurses-dev
+sudo apt-get install libncurses5-dev
+cd ..
+ls
+export LDFLAGS=-L/usr/lib
+./configure --with-features=huge --enable-perlinterp --enable-cscope --with-python --enable-rubyinterp
+./configure --with-features=huge --enable-perlinterp --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config --enable-rubyinterp
+sudo make && make install
+./configure --with-features=huge --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config 
+make
+sudo make && make install
+sudo make
+sudo make install
+vim
+sudo -i
+cd ..
+ls
+git clone https://github.com/git/git.git
+ll
+ls
+cd git/
+make configure
+sudo apt-get install autoconf
+clear
+make configure
+./configure --prefix=/usr/
+make all
+sudo make install
+which git
+/usr/bin/git =v
+/usr/bin/git -v
+/usr/bin/git --version
+sudo -i
+/usr/bin/git --version
+ls
+ls git£
+ls git*
+./git --version
+mv ./git /usr/local/bin/
+sudo mv ./git /usr/local/bin/
+git --version
+ls git-*
+cd ..
+ls
+mv git/ git.old
+git clone git://git.kernel.org/pub/scm/git/git.git
+ls
+sudo mv git vim /usr/local/src/
+ls
+cd
+cd /usr/local/src/
+ls
+wget http://curl.haxx.se/download/curl-7.40.0.tar.gz
+sudo wget http://curl.haxx.se/download/curl-7.40.0.tar.gz
+ls
+sudo -i
+ls
+sudo chown -R $USER /usr/local/
+ll
+ls
+ls =l
+ls -l
+rm =rf curl-7.40.0/
+rm -rf curl-7.40.0/
+alias ll='ls -l'
+ll
+git clone git://github.com/badger/curl.git
+git clone git://github.com/bagder/curl.git
+ll
+cd
+vi .bashrc 
+history | grep editor
+sudo update-alternatives --config editor
+vim
+ll
+vim .bashrc 
+source .bashrc 
+ll
+vim .bashrc 
+sb
+ll
+rmf local/
+ll
+git --version
+vi
+sudo -i
+ll
+vi .bashrc 
+sb
+ll
+alias 
+la
+sudo -i
+sudo pwd
+chmod 0700 /home/vagrant/.ssh/
+wget --no-check-certificate https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub -O /home/vagrant/.ssh/authorized_keys
+chmod 0600 /home/vagrant/.ssh/authorized_keys 
+chown -R vagrant /home/vagrant/.ssh/
+sudo vi /etc/ssh/sshd_config 
+sudo vim /etc/ssh/sshd_config 
+/etc/init.d/ssh restart
+sudo service ssh restart
+sudo ifconfig 
+echo $PATH
+su - vagrant
+exit
+ll
+vi .bashrc 
+vim .bashrc 
+source .bashrc 
+cd .rbenv/bin/
+ll
+ls
+cd
+rm -f .bashrc 
+mv .bash_profile .bashrc
+source .bashrc 
+ll
+vi .bashrc 
+vim .bashrc 
+mv .aliases .bash_aliases
+source .bashrc 
+ll
+path
+vi .bashrc 
+source .bashrc 
+ll
+path
+type rbenv
+cd .rbenv/
+git pull
+git fetch
+git tag
+cd
+h
+hl
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+ll
+cd
+cd .rbenv/plugins/
+ll
+cd ruby-build/
+ll
+./install.sh 
+ll
+./install.sh 
+cd
+rbenv install -l
+rbenv install
+rbenv install -l | less
+rbenv install 2.2.0
+sudo rbenv install 2.2.0
+rbenv install 2.2.0
+cd .rbenv/plugins/ruby-build/
+ll
+sh install.sh 
+ruby-build 
+ruby-build ~/local/ruby-2.2.0
+ruby-build 2.2.0 ~/local/ruby-2.2.0
+rbenv install -l | less
+rbenv install 2.1.5
+exit
+ll
+rbenv install 2.2.0
+sudo -i
+cd
+rbenv install 2.2.0
+ruby -v
+ruby -version
+cd
+cd .rbenv/versions/
+ll
+cd
+rbenv version
+rbenv rehash 
+rbenv version
+cd /usr/local/src/
+ll
+git clone https://github.com/joyent/node.git
+ll
+cd node/
+ll
+./configure 
+make
+sudo make install
+node -v
+git tag
+npm -v
+node
+npm install forever -g
+sudo npm install forever -g
+ll
+cd
+ll
+cd /var/
+ll
+cd
+ll
+mkdir -p dev/www/test
+cd dev/www/
+ll
+cd test/
+mkdir nodejs
+cd nodejs/
+vi ~/.vimrc
+pushd ~
+ll
+la
+mkdir .cache/vim/undo
+mkdir -p .cache/vim/undo
+popd 
+vi ~/.vimrc
+ll
+vi serverTest.js
+vi ~/.vimrc
+vi serverTest.js
+ll
+node
+ll
+node serverTest.js 
+vi serverTest.js
+node serverTest.js 
+ll
+vi serverTest.js
+ll
+sudo npm install -g grunt grunt-cli
+sudo npm install -g gulp
+sudo npm install -g bower
+c
+sudo npm install -g yo
+sudo npm install -g yeoman
+c
+sudo npm install -g yo
+cd /usr/local/src/node/
+ll
+git tag
+git checkout v0.10.36
+git branch
+./configure 
+make
+sudo make install
+node -v
+sudo npm install -g yo
+cd
+cd dev/www/test/
+ll
+cd nodejs/
+ll
+rmf npm-debug.log 
+ll
+vi serverTest.js 
+node serverTest.js 
+ll
+cd
+sudo npm install -g generator-webapp
+cd /usr/local/src/
+ll
+git clone git://github.com/rupa/z.git
+ll
+cd z/
+ll
+vi /home/vagrant/.bashrc 
+ll
+vi /home/vagrant/.bashrc 
+sb
+ll
+cd
+cd dev/www/test/
+ll
+cd
+z /home/vagrant/dev/www/test/
+ll
+sudo npm install -g generator-angular
+cd /usr/local/src/
+ll
+git clone git://github.com/rubygems/rubygems.git
+ll
+cd rubygems/
+sudo ruby setup.rb 
+ruby --version
+cd
+cd .rbenv/versions/
+ll
+rbenv rehash 
+rbenv version
+rbenv versions
+cd ..
+ll
+rbenv version
+rbenv versions
+ll
+la
+cd plugins/
+ll
+h
+h | grep ruby
+h | grep 2.2.0
+rbenv global 2.2.0
+ruby
+ruby -v
+cd /usr/local/src/
+ll
+cd rubygems/
+ll
+sudo ruby setup.rb 
+ruby setup.rb 
+gem update --system
+sudo gem install sass compass
+gem install sass compass
+cd
+sudo npm install -g cordova
+sudo npm install -g ionic
+ll
+npm list -g
+sudo npm list -g --depth=0
+sudo npm install -g grunt-phpcs
+sudo npm install -g claymate
+sudo npm install -g grunt-init
+cd /etc/apt/sources.list.d/
+ll
+sudo vi dotdeb.list
+sudo vim dotdeb.list
+cd
+sudo -i
+sudo apt-get update
+sudo apt-cache search php5
+sudo apt-cache policy php5
+sudo vim /etc/apt/sources.list.d/dotdeb.list 
+sudo apt-get update
+sudo apt-cache policy php5
+sudo vim /etc/apt/sources.list.d/dotdeb.list 
+sudo apt-get update
+sudo apt-cache policy php5
+sudo apt-get php-cli
+sudo apt-get install php-cli
+sudo apt-cache policy php5-cli
+sudo apt-get install php5-cli
+sudo apt-get install php-pear
+pear list
+pear install PHP_CodeSniffer
+sudo pear install PHP_CodeSniffer
+phpcs help
+sudo apt-get install zerofree
+cd
+cd .ssh/
+ll
+vi authorized_keys 
+ll
+sudo -i
+cll
+ll
+sudo service ssh restart
+ll
+vi authorized_keys 
+q
+ll
+chmod 644 authorized_keys 
+ll
+sudo shutdown -h now
+ll
+lk
+la
+rmf ..vimrc.un~ 
+ll
+la
+vi .bashrc 
+ll
+c
+vi .bashrc 
+vi .vimrc 
+vi .bashrc 
+ll
+which vim
+type vim
+vi .bashrc 
+sb
+type vim
+vi .bashrc 
+sb
+vi .bashrc 
+sb
+echo $EDITOR
+vi .bashrc 
+path
+sb
+path
+vi .bashrc 
+sb
+path
+exit
+path
+vi /etc/profile
+ll
+vi .bashrc 
+exit
+path
+vi /etc/profile
+vi /etc/bash.bashrc 
+path
+vi .bashrc 
+sb
+path
+vi .bashrc 
+cp .bash_aliases .aliases
+sb
+ll
+mv .aliases .shell_aliases
+sb
+ll
+source .bashrc 
+ll
+mv .bash_aliases .bash_aliases.bak
+sb
+ll
+exit
+ll
+ll .shell_aliases 
+vb
+vi .bashrc 
+vim .bashrc 
+source .bashrc 
+ll
+exit
+ll
+vim .bashrc 
+mv .bash_aliases.bak .bash_aliases
+rm .shell_aliases 
+ll
+source .bashrc 
+ll
+vb
+vim .bashrc 
+vim .bash_aliases 
+vi .vimrc 
+source .bashrc 
+vb
+sudo apt-get install most
+sudo apt-cache search completion
+sudo apt-get install bash-completion
+vb
+man ls
+sb
+man ls
+vb
+man date
+vb
+cd
+cd /usr/local/src/
+ll
+git clone https://github.com/magicmonty/bash-git-prompt.git
+ll
+cd
+ln -sfn /usr/local/src/bash-git-prompt/ ~/.bash-git-prompt
+lk
+cd .bash-git-prompt
+ll
+cd
+vb
+sb
+ll
+cd /usr/local/src/git/
+ll
+cd
+vb
+sb
+ll
+pushd /usr/local/src/vim/
+s
+cd git/
+s
+cd
+vb
+sudo -i
+cd /usr/local/src/
+ll
+git clone --recursive https://github.com/sorin-ionescu/prezto.git zprezto
+ll
+cd
+ln -sfn /usr/local/src/zprezto/ ~/.zprezto
+ll
+vi .bash_aliases 
+sb
+lk
+ls =la
+la
+lk
+ls -lah
+ls -lah|grep ->
+ls -lah|grep "->"
+ls -lah|grep "\->"
+vi .bash_aliases 
+sb
+lh
+source .bashrc 
+lh
+source .bash_aliases 
+lh
+lk
+lli
+ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
+ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
+ln -s ~/.zprezto/runcoms/zpreztorc ~/.zpreztorc
+ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
+ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
+ln -s ~/.zprezto/runcoms/zshrc ~/.zshrc
+zsh
+vi .zpreztorc 
+ll
+exit
+zsh
+lk
+ll
+ls =la
+ls -la
+vi .bash_aliases 
+vi .aliases 
+ls =a
+ls -a
+vim .bash_aliases 
+ll
+vim .bashrc 
+sb
+source .bashrc 
+ll
+lk
+vb
+sb
+zsh
+exit
+zsh
+vb
+c
+vi .zshrc 
+c
+lk
+cd .zprezto
+ll
+source init.zsh 
+cd
+zsh --version
+ll
+lk
+zsh
+ll
+mv .zprezto .zprezto.link
+ll
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+ll
+zsh
+lk
+vi .zshrc 
+ll
+c
+vi .zprofile 
+ll
+ll .zsh*
+ll
+cd .zprezto
+ll
+s
+ll
+s
+ll
+cd vagrant/
+ll
+lk
+c
+vi .vimrc 
+ll
+vb
+sb
+cd /usr/local/src/git/
+ll
+ls
+echo $TERM
+vb
+sb
+s
+cd bash-git-prompt/
+ll
+cd themes/
+ll
+cd
+vb
+sb
+vb
+sb
+source .bashrc 
+vb
+sb
+source .bashrc 
+echo $green
+echo $green bill
+vb
+source .bashrc 
+echo $bo
+echo $green $bo
+echo \[\033[1,36m\]bill
+echo \033[1,36mbill
+echo \033[1;36mbill
+echo \[\033[1;36m\]bill
+echo \[\033[1;36m\] bill
+vb
+sb
+vb
+sb
+vb
+sb
+vb
+sb
+source .bashrc 
+vb
+sb
+vb
+sb
+vb
+sb
+vb
+sb
+source .bashrc 
+vb
+exit
+ll
+echo $PS1
+vb
+sb
+vb
+sb
+c
+vb
+sb
+ll
+lk
+la
+vb
+sb
+vb
+sb
+vb
+sb
+ll
+tput setaf 1
+tput setaf 2
+tput setaf 172
+vb
+vi .bash_aliases 
+sb
+ll
+lk
+vb
+sb
+vb
+sb
+set
+setenv
+ENV
+setenv
+vb
+sb
+printenv 
+vb
+sb
+printenv SHELL
+printenv TERM
+printenv green
+vb
+sb
+ll
+vb
+sb
+vb
+sb
+ll
+vi .vimrc 
+vb
+ll
+lk
+lh
+la
+vb
+vi .vimrc
+ll
+cd .cache/
+la
+cd vim/
+ll
+cd undo/
+ll
+cd
+ll
+vi .vimrc
+cd .cache/
+la
+cd .vim/
+la
+cd
+s
+ll
+cd vagrant/
+cd .cache/
+ll
+rmf vim/
+ll
+la
+cd
+vi .vimrc
+cd .cache/.vim/
+ll
+la
+cd
+vi .vimrc
+cd .cache/.vim/
+la
+vi .vimrc
+cd
+vi .vimrc
+cd .cache/.vim/
+ll
+la
+cd
+vi .vimrc
+cd .cache/.vim/.cache/undo/
+ll
+la
+cd
+ll
+vi .vimrc
+cd .cache/.vim/neobundle/base16-vim/
+ll
+cd colors/
+ll
+vi ~/.vimrc
+vb
+sb
+vb
+vi ~/.vimrc
+exit
+ll
+vi
+vb
+sb
+vb
+sb
+vb
+sb
+vb
+sb
+ll
+vb
+sb
+vb
+sb
+exit
+ll
+vb
+sb
+exit
+vb
+sb
+source .bashrc 
+lk
+ll
+la
+vb
+sb
+vb
+sb
+ll
+vb
+sb
+exit
+ll
+z /usr/local/src
+ll
+cd curl/
+ll
+ifconfig 
+s
+ll
+git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt
+ll
+cd sexy-bash-prompt/
+ll
+make install
+cd
+source .bashrc 
+ll
+vb
+sb
+ll
+cd
+la
+vb
+ll
+mv .bash_prompt .bash_prompt.bak
+ll
+sb
+ll
+cd /usr/local/src/sexy-bash-prompt/
+ll
+cd
+vb
+ll
+sb
+vb
+ln -sfn /usr/local/src/sexy-bash-prompt/.bash_prompt ~/.bash_prompt
+sb
+ll
+c
+ll
+cd /usr/local/src/
+cd sexy-bash-prompt/
+cd
+exit
+cd /usr/local/src/
+ll
+cd sexy-bash-prompt/
+s
+ll
+cd bash-git-prompt/
+s
+cd node/
+git checkout master
+s
+cd vim/
+ll
+s
+ll
+cd git/
+ll
+vb
+ll
+cd
+ll
+cd dev/
+ll
+cd www/
+ll
+cd test/
+ll
+s
+ll
+cd
+ll
+mkdir tmp
+ll
+cd tmp/
+ll
+wget https://raw.githubusercontent.com/twolfson/sexy-bash-prompt/master/README.md
+ll
+cd
+vi .vimrc tmp/README.md 
+ll
+vi .bashrc tmp/README.md 
+sb
+z /usr/local/src
+ll
+cd git/
+ll
+s
+ll
+cd git/
+s
+ll
+cd
+vi .bashrc tmp/README.md 
+ll
+sb
+ll
+cd dev/
+ll
+cd cd
+cd tmp
+s
+cd tmp/
+ll
+rmf README.md 
+ll
+mkd gitest
+cd
+rmf .bash_prompt.bak 
+ll
+vi .bash_aliases 
+sb
+cd tmp/
+mkd gitest
+ll
+git init
+cd
+vb
+sb
+cd tmp/gitest/
+cd
+vb
+sb
+cd tmp/gitest/
+ll
+touch test.{txt,c,sh,php,vim,sql,lua,py,doc,xls}
+ll
+cd
+vb
+sb
+cd tmp/gitest/
+ll
+cd
+vb
+sb
+cd tmp/gitest/
+ll
+cd
+cd tmp/gitest/
+vb
+sb
+ll
+tput staf 5
+vb
+sb
+ll
+git add test.c
+git commit -m "commit test.c"
+z /usr/local/src
+ll
+git clone https://github.com/trap00r/LS_COLORS.git
+git clone https://github.com/trapOOr/LS_COLORS.git
+ll
+git clone https://github.com/trap00r/LS_COLORS.git
+h
+vi /home/vagrant/.bash_aliases 
+sb
+hgrep clone
+git clone git://github.com/trapd00r/LS_COLORS.git
+ll
+cd LS_COLORS/
+ll
+vb
+vi /home/vagrant/.bash_aliases 
+vb
+cd
+la
+ln -sfn /usr/local/src/LS_COLORS/LS_COLORS ~/.dircolors
+vb
+sb
+ll
+vb
+sb
+vb
+sb
+ll
+la
+cd /usr/share/terminfo/
+ll
+cd x/
+ll
+z /usr/
+z /usr/local/src
+ll
+git clone git://github.com/seebi/dircolors-solarized.git
+cd dircolors-solarized/
+ll
+cd
+ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-dark ~/.dircolors
+sb
+ll
+cd tmp/gitest/.git/
+s
+ll
+pushd ~
+ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-light ~/.dircolors
+sb
+ll
+ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-universal ~/.dircolors
+sb
+ll
+popd 
+ll
+cd
+ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-dark ~/.dircolors
+sb
+ll
+la
+ln -sfn /usr/local/src/dircolors-solarized/dircolors.ansi-light ~/.dircolors
+ll
+sb
+ll
+lk
+la
+cd tmp/gitest/.git/
+s
+ll
+z /usr/local/src
+ll
+mkdir dircolors
+ll
+mv LS_COLORS/ dircolors-solarized/ dircolors
+ll
+mkdir bash-prompt
+mv sexy-bash-prompt/ bash-git-prompt/ bash-prompt/
+ll
+mkdir zsh-prompt
+mv zprezto/ zsh-prompt/
+ll
+cd
+lk
+ln -sfn /usr/local/src/bash-prompt/bash-git-prompt/ ~/.bash-git-prompt 
+ln -sfn /usr/local/src/bash-prompt/sexy-bash-prompt/.bash_prompt ~/.bash_prompt 
+ln -sfn /usr/local/src/dircolors/dircolors-solarized/dircolors.ansi-light ~/.dircolors 
+ll
+rmf .zprezto
+mv .zprezto.link .zprezto
+ln -sfn /usr/local/src/zsh-prompt/zprezto/ ~/.zprezto
+ll
+sb
+ll
+z /usr/local/src
+ll
+cd dircolors/dircolors-solarized/
+ll
+git branch -a
+git checkout -b customize
+ll
+vi dircolors.ansi-light 
+l
+ll
+sb
+ll
+vi dircolors.ansi-light 
+sb
+ll
+vi dircolors.ansi-light 
+sb
+ll
+pushd ~/
+ll
+popd 
+vi dircolors.ansi-light 
+sb
+pushd ~/
+ll
+popd 
+vi dircolors.ansi-light 
+sb
+pushd ~/
+ll
+cd /
+ll
+cd /var/cache/apt/
+ll
+cd archives/
+ll
+sudo apt-get clean
+ll
+cd
+df
+sudo -i
+ll
+z /usr/local/src
+ll
+mkd test
+ll
+s
+ll
+rmf test/
+ll
+cd bash-prompt/
+ll
+cd
+chmod 700 .ssh/
+chmod 600 .ssh/authorized_keys 
+chown -R vagrant:vagrant .ssh/
+sudo -i
+ll
+sudo find /usr/share/locale/* -maxdepth 1 -type d ! -name "fr*" ! -name "en*" -exec rm -rf {} \;
+cd /usr/share/locale/
+ll
+cd /usr/src/
+ll
+cd
+ll
+mv dev/ code
+ll
+cd code/
+ll
+mkdir personal
+ll
+mkdir others
+ll
+mv www/ personal/
+ll
+cd others/
+ll
+mkdir github.com
+ll
+z /usr/
+cd local/src/
+ll
+git clone https://github.com/github/hub.git
+ll
+cd hub/
+ll
+script/build 
+s
+ll
+git clone https://github.com/golang/go.git
+ll
+s
+ll
+ln -s src/go/ ./go
+ll
+vb
+ll
+sb
+ll
+vb
+echo $TERM
+vb
+sb
+ll
+vb
+sb
+ll
+cd src/
+ll
+cd hub/
+script/build 
+exit
+z /usr/
+cd local/src/
+cd hub/
+s
+cd go/
+ll
+git tag
+ll
+cd src/
+ll
+sudo ./all.bash 
+sudo -i
+ll
+./all.bash 
+sudo ./all.bash 
+./make.bash 
+s
+cd src/go/
+ll
+cd src/
+sudo ./make.bash 
+ll
+ls
+sudo ./all.bash 
+git tag | less
+git checkout go1.4
+ll
+sudo ./all.bash 
+ll
+ls
+go --version
+ls
+sudo ./all.bash > go.txt
+vi go.txt 
+rmf go.txt 
+ll
+sudo apt-cache search golang
+sudo apt-cache policy golang
+sudo apt-get install golang
+s
+ll
+s
+ll
+cd hub/
+ll
+script/build 
+sudo script/build 
+ll
+cd script/
+ll
+su
+go version
+ll
+su
+hgrep golang
+hgrep install
+sudo apt-get remove golang --purge
+sudo apt-get autoremove 
+ll
+sudo shutdown -h now
+z /usr/
+cd local/src/
+cd hub/
+s
+cd go/
+ll
+git tag
+ll
+cd src/
+ll
+sudo ./all.bash 
+sudo -i
+ll
+./all.bash 
+sudo ./all.bash 
+./make.bash 
+s
+cd src/go/
+ll
+cd src/
+sudo ./make.bash 
+ll
+ls
+sudo ./all.bash 
+git tag | less
+git checkout go1.4
+ll
+sudo ./all.bash 
+ll
+ls
+go --version
+ls
+sudo ./all.bash > go.txt
+vi go.txt 
+rmf go.txt 
+ll
+sudo apt-cache search golang
+sudo apt-cache policy golang
+sudo apt-get install golang
+s
+ll
+s
+ll
+cd hub/
+ll
+script/build 
+sudo script/build 
+ll
+cd script/
+ll
+su
+go version
+ll
+su
+hgrep golang
+hgrep install
+sudo apt-get remove golang --purge
+sudo apt-get autoremove 
+ll
+sudo shutdown -h now
+z /usr/
+cd local/src/
+cd hub/
+s
+cd go/
+ll
+git tag
+ll
+cd src/
+ll
+sudo ./all.bash 
+sudo -i
+ll
+./all.bash 
+sudo ./all.bash 
+./make.bash 
+s
+cd src/go/
+ll
+cd src/
+sudo ./make.bash 
+ll
+ls
+sudo ./all.bash 
+git tag | less
+git checkout go1.4
+ll
+sudo ./all.bash 
+ll
+ls
+go --version
+ls
+sudo ./all.bash > go.txt
+vi go.txt 
+rmf go.txt 
+ll
+sudo apt-cache search golang
+sudo apt-cache policy golang
+sudo apt-get install golang
+s
+ll
+s
+ll
+cd hub/
+ll
+script/build 
+sudo script/build 
+ll
+cd script/
+ll
+su
+go version
+ll
+su
+hgrep golang
+hgrep install
+sudo apt-get remove golang --purge
+sudo apt-get autoremove 
+ll
+sudo shutdown -h now
+ll
+sudo apt-get update
+sudo apt-get install nginx
+sudo service nginx start
+ifconfig eth0 | grep inet | awk '{ print $2 }'
+curl 'http://localhost:80'
+netstat -tnlp
+lsmod | grep vbox
+sudo shutdown -h now
+ll
+sudo apt-get update
+sudo apt-get install nginx
+sudo service nginx start
+ifconfig eth0 | grep inet | awk '{ print $2 }'
+curl 'http://localhost:80'
+netstat -tnlp
+lsmod | grep vbox
+sudo shutdown -h now
+ll
+sudo shutdown -h now
+ll
+sudo shutdown -h now
+dmesg 
+dmesg | less
+ll
+sudo shutdown -h now
+dmesg 
+dmesg | less
+ll
+sudo shutdown -h now
+ll
+sudo shutdown -r now
+ll
+sudo shutdown -r now
+sudo shutdown -h now
+sudo shutdown -h now
+ll
+sudo reboot
+ll
+sudo reboot
+sudo vim /etc/default/grub 
+sudo update-grub
+sudo reboot
+sudo vim /etc/default/grub 
+sudo update-grub
+sudo reboot
+sudo vim /etc/default/grub 
+sudo update-grub
+sudo reboot
+sudo vim /etc/default/grub 
+sudo update-grub
+sudo reboot
+sudo shutdown -h now
+sudo shutdown -h now
+ifconfig 
+ifconfig -a
+sudo vi /etc/network/interfaces 
+sudo vim /etc/network/interfaces 
+ifconfig -a
+ifconfig -a|less
+sudo vim /etc/network/interfaces 
+cd /etc/network/
+ll
+sudo cp interfaces interfaces.old
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+sudo ifconfig -a
+sudo shutdown -r now
+ifconfig 
+ifconfig -a
+sudo vi /etc/network/interfaces 
+sudo vim /etc/network/interfaces 
+ifconfig -a
+ifconfig -a|less
+sudo vim /etc/network/interfaces 
+cd /etc/network/
+ll
+sudo cp interfaces interfaces.old
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+sudo ifconfig -a
+sudo shutdown -r now
+ifconfig 
+ifconfig -a
+sudo vi /etc/network/interfaces 
+sudo vim /etc/network/interfaces 
+ifconfig -a
+ifconfig -a|less
+sudo vim /etc/network/interfaces 
+cd /etc/network/
+ll
+sudo cp interfaces interfaces.old
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+sudo ifconfig -a
+sudo shutdown -r now
+dmesg 
+ping -c4 192.168.0.1
+ping -c4 google.com
+sudo ifconfig -a | less
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+ping -c4 192.168.0.1
+sudo shutdown -r now
+dmesg 
+ping -c4 192.168.0.1
+ping -c4 google.com
+sudo ifconfig -a | less
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+ping -c4 192.168.0.1
+sudo shutdown -r now
+ping -c4 192.168.0.1
+sudo ifdown eth0
+ping -c4 192.168.0.1
+sudo ifup eth1
+ping -c4 192.168.0.1
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+sudo ifconfig -a | less
+sudo shutdown -r now
+ping -c4 192.168.0.1
+sudo ifdown eth0
+ping -c4 192.168.0.1
+sudo ifup eth1
+ping -c4 192.168.0.1
+sudo vim /etc/network/interfaces 
+sudo service networking restart 
+sudo ifconfig -a | less
+sudo shutdown -r now
+sudo ifconfig -a | less
+cd /etc/network/
+ll
+sudo mv interfaces interfaces.test
+sudo mv interfaces.old interfaces
+ll
+sudo shutdown -h now
+sudo ifconfig -a | less
+cd /etc/network/
+ll
+sudo mv interfaces interfaces.test
+sudo mv interfaces.old interfaces
+ll
+sudo shutdown -h now
+sudo ifconfig -a | less
+cd /etc/network/
+ll
+sudo mv interfaces interfaces.test
+sudo mv interfaces.old interfaces
+ll
+sudo shutdown -h now
+cd .ssh/
+ll
+sudo shutdown -h now
+cd .ssh/
+ll
+sudo shutdown -h now
+cd .ssh/
+ll
+cd
+rm -rf .ssh/
+ll
+la
+ll
+ssh-add -l
+sudo apt-get remove openssh-server openssh-client
+sudo apt-get autoremove
+sudo shutdown -r now
+cd .ssh/
+ll
+cd
+rm -rf .ssh/
+ll
+la
+ll
+ssh-add -l
+sudo apt-get remove openssh-server openssh-client
+sudo apt-get autoremove
+sudo shutdown -r now
+ll
+exit
+ll
+mkd ~/.ssh
+ll
+chmod 700 ~/.ssh/
+ll
+s
+ll
+la
+lk
+la
+vi .vimrc 
+ll
+ll .ssh/
+ll .ss*
+ll
+curl 'http://localhost'
+ll
+cd .ssh/
+ll
+cat authorized_keys 
+ll
+exit
+cd /etc/ssh/
+ll
+s
+rmf ./ssh/
+sudo rmf ./ssh/
+sudo rm -rf ./ssh/
+ll
+sudo apt-get install openssh-server openssh-client
+sudo service ssh restart
+z /usr/
+cd local/src/
+ll
+s
+ll
+cd go/
+ll
+cd src/
+ll
+ls
+sudo ./all.bash 
+cd /usr/share/
+ll
+cd doc
+ll
+c
+ls
+man ls
+ll
+sudo apt-get clean 
+du -sh /
+sudo du -sh /
+ll
+sudo shutdown -h now
+ll
+sudo shutdown -h now
+ll
+curl 'http://localhost'
+sudo ifconfig -a | grep eth
+sudo ifconfig -a | grep addr
+sudo ifconfig -a | less
+cd /etc/network/
+ll
+mv interfaces interfaces.old
+sudo mv interfaces interfaces.old
+sudo vi interfaces
+ll
+sudo cp interfaces.test interfaces
+sudo vi interfaces
+sudo vim interfaces
+sudo service networking restart 
+sudo ifconfig -a | less
+sudo shutdown -h now
+ll
+sudo ifconfig -a | less
+ping -c4 192.168.56.101
+sudo vim /etc/network/interfaces
+sudo iptables -L
+sudo shutdown -r now
+ll
+ping -c4 192.168.56.101
+ifconfig 
+exit
+sudo apt-cache search hub
+sudo apt-get install hub
+sudo shutdown -h now
+ll
+ifconfig 
+curl 'http://192.168.56.101'
+curl 'http://10.0.2.15'
+sudo route
+sudo service iptabbles stop
+sudo apt-cache search mariadb
+sudo apt-cache search percona
+cd /etc/apt/
+cd sources.list.d/
+ll
+ca dotdeb.list >> ../sources.list
+sudo cat dotdeb.list >> ../sources.list
+sudo -i
+ll
+s
+sudo vim sources.list
+cd sources.list.d/
+ll
+vi percona-server.list
+sudo vi percona-server.list
+sudo vim percona-server.list
+q
+sudo -i
+ll
+sudo vim percona-server.list
+ll
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+sudo vim /etc/apt/preferences.d/00percona.pref
+sudo apt-get update
+sudo apt-cache search percona
+sudo apt-cache search percona-server
+sudo apt-get install php5-curl php5-xmlrpc php5-gd php5-intl  php5 php5-common php5-dev php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-mysql php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy
+sudo apt-get install php5-curl php5-xmlrpc php5-gd php5 php5-common php5-dev php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache  php5-mysql php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy
+cd /usr/share/nginx/www/
+ll
+sudo vim info.php
+sudo service nginx restart
+sudo apt-get remove
+sudo apt-get remove nginx
+sudo apt-get install apache2
+cd /usr/share/nginx/
+ll
+cd www/
+ll
+sudo cp info.php /var/www/
+sudo apt-get install libapache2-mod-php5
+sudo apt-get autoremove
+sudo service apache2 restart
+sudo update-rc.d apache2 enable
+sudo service apache2 restart
+curl 'http://localhost'
+curl 'http://localhost/info.php'
+sudo shutdown -r now
+sudo lsb_release -a
+cd /etc/apt/sources.list.d/
+ll
+sudo vim mariadb.list
+ll
+sudo apt-get install python-software-properties
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+sudo add-apt-repository 'deb http://nwps.ws/pub/mariadb/repo/10.0/debian wheezy main'
+sudo apt-get update
+sudo apt-get install mariadb-server
+ll
+s
+ll
+vi sources.list
+sudo vim sources.list
+ll
+cd sources.list.d/
+ll
+sudo -i
+curl 'http://localhost/info.php'
+curl 'http://localhost/'
+cd /var/www/
+ll
+php -i
+telnet yonitg.com 80
+ll
+telnet localhost 80
+ifconfig 
+su
+exit
+vi .bashrc 
+exit
+lastlog 
+su
+sb
+q
+vi .bashrc 
+sb
+ll
+q
+h
+h > provision.sh
+vi provision.sh 
+cp provision.sh provision.sh.bak 
+vi provision.sh 
+su
+sb
+cd tmp/gitest/
+su
+q
+exit
+vi .vimrc 
+vi .bash_aliases 
+q
+vi .bashrc 
+c
+sb
+w
+touch .hushlogin
+ll
+vi .bashrc 
+sb
+su
+vi .bashrc 
+ll
+sb
+cd tmp/gitest/.git/
+sb
+ll
+sb
+c
+sb
+ll
+sb
+c
+ll
+cd
+vi .vimrc 
+ll
+vi .gitconfig
+ll
+cd code/
+ll
+cd personal/
+ll
+mkdir -p github.com/dotfiles
+ll
+cd
+ll
+la
+ll
+cd code/personal/
+ll
+cd www/
+ll
+mkdir -p home sites
+ll
+cd sites/
+vi site.sh
+ll
+chmod +x site.sh 
+./site.sh christian-achille.com
+ll
+sudo apt-get install tree
+c
+ll
+tree christian-achille.com/
+ll
+su
+hgrep php5-
+sudo apt-get install php5-gd php5-curl php5-dev php-pear php5-imagick php5-mcrypt
+sudo service apache2 restart
+ll
+su
+popd 
+vi
+ll
+sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache  php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+ll
+sudo service apache2 restart 
+sudo apt-get install mariadb-server mariadb-client
+su
+mysql -u root -p
+sudo service mysql restart
+su
+ll
+ifconfig 
+ping -c4 192.168.0.1
+ping -c4 192.168.0.12
+ping -c4 192.168.56.101
+curl 'http://localhost'
+curl 'http://localhost/info.php'
+ll
+su
+ll
+q
+cd code/personal/www/sites/example.com/wwwroot/
+pwd
+s
+ll
+s
+ll
+touch maintenance.html
+ll
+mv example.com/ examplejs.com/
+ll
+mv examplejs.com/ example.js.com/
+ll
+mv example.js.com/ examplejs.com/
+ll
+vi maintenance.html 
+su
+ll
+cd examplejs.com/wwwroot/
+ll
+touch index.html
+cp ../../maintenance.html index.html
+ll
+vi index.html 
+s
+ll
+vi maintenance.html 
+su
+ll
+sudo mkdir /var/run/forever
+cd /var/www/
+ll
+cat /etc/group | grep www
+sudo usermod -a -G www-data vagrant
+sudo chown -R root:www-data /var/www/
+sudo chmod -R 775 /var/www/
+ll
+rm index.html 
+ll
+rm -F index.html 
+rmf index.html 
+q
+ll
+su
+cd 
+cd code/personal/www/sites/
+ll
+./site.sh example.com
+ll
+tree example.com/
+su
+cd 
+cd bin/
+ll
+cd
+cd .dotfiles/scripts/
+ll
+mv site.sh create-site.sh
+ll
+cd
+cd bin/
+ll
+ln -sfn ~/.dotfiles/scripts/create-site.sh ./create-site
+ll
+rm site.sh 
+ll
+c
+ll
+vi create-site 
+ll
+vi create-site 
+cd /var/www/
+ll
+c
+create-site dev.com mysite.com test.com angular.com blog.com
+ll
+tree mysite.com/
+echo $USER
+vi /home/vagrant/bin/create-site 
+ll
+su
+ll
+vi /home/vagrant/bin/create-site 
+ll
+vi /home/vagrant/bin/create-site 
+ll
+exit
+ll
+exit
+ll
+cd /var/www/
+ll
+mkd example
+ll
+s
+ll
+rmf example/
+ll
+sudo rmf index.html 
+sudo rm index.html 
+ll
+sudo mv info.php index.php
+ll
+sudo rm index.php 
+ll
+vi index.php
+ll
+cp -a ~/code/personal/www/sites/ .
+ll
+rmf sites/
+ll
+cp -a ~/code/personal/www/sites/examplejs.com/ .
+ll
+cp -a ~/code/personal/www/sites/site.sh .
+ll
+pushd ~
+ll
+la
+ln -s ~/code/personal/github.com/dotfiles/ ~/.dotfiles
+ll
+cd .dotfiles
+ll
+mkdir scripts
+ll
+popd 
+ll
+mv site.sh ~/.dotfiles/scripts/
+cd
+cd bin/
+ln -s ~/.dotfiles/scripts/site.sh 
+ll
+vi site.sh 
+cd /var/www/
+ll
+site.sh test.com
+ll
+tree test.com/
+ll
+cd
+cd bin/
+vi site.sh 
+ll
+c
+ll
+cd /var/www/
+ll
+rmf test.com/
+c
+create-site test.com
+ll
+cd test.com/
+ll
+cd public/
+ll
+s
+ll
+create-site test.com
+rmf test.com/
+ll
+create-site test.com
+ll
+create-site test.com
+rmf test.com/
+ll
+create-site test.com
+ll
+tree test.com/
+ll
+rmf test.com/
+c
+create-site test.com
+tree test.com/
+ll
+touch test.com/public/pages/blog/blog_itm1.html
+rmf test.com/
+ll
+c
+create-site test.com
+ll
+tree test.com/
+ll
+rmf test.com/
+c
+create-site test.com
+tree test.com/
+rmf test.com/
+ll
+c
+create-site test.com
+tree test.com/
+tree test.com/ | less
+rmf test.com/
+c
+create-site test.com
+tree test.com/
+ll
+c
+create-site mysite.com
+tree mysite.com/
+cd mysite.com/
+ll
+cd public/
+ls
+s
+ll
+s
+ll
+rmf mysite.com/
+ll
+create-site mysite.com
+tree mysite.com/
+ll
+rmf mysite.com/ test.com/
+ll
+create-site mysite.com
+tree mysite.com/
+cd mysite.com/
+ll
+cd assets/
+ll
+s
+ll
+rmf mysite.com/
+create-site mysite.com
+cd mysite.com/
+ll
+cd assets/
+ll
+s
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+vi /home/vagrant/.bashrc 
+ll
+rmf mysite.com/
+create-site mysite.com
+sb
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+tree mysite.com/
+rmf mysite.com/
+create-site mysite.com
+tree mysite.com/
+ll
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+rmf mysite.com/
+create-site mysite.com
+ll
+cd mysite.com/
+ll
+cd public/
+ll
+s
+ll
+rmf mysite.com/
+ll
+create-site mysite.com dev.site.com test_angular.com
+ll
+rmf mysite.com/
+ll
+create-site mysite.com dev.site.com test_angular.com
+ll
+rmf dev.site.com/ mysite.com/ test_angular.com/
+ll
+create-site mysite.com dev.site.com test_angular.com
+ll
+tree dev.site.com/
+ll
+create-site mysite.com
+create-site mysite.com dev.site.com test_angular.com
+create-site mysite.com dev.site.com tata.com
+ll
+create-site mysite.com dev.site.com tata.com
+create-site tata.com
+ll
+cd tata.com/
+ll
+s
+ll
+cp ~/code/personal/www/sites/maintenance.html .
+ll
+cp examplejs.com/wwwroot/index.html .
+ll
+rmf examplejs.com/
+ll
+rmf dev.site.com/ mysite.com/ tata.com/ test_angular.com/
+ll
+create-site example.com
+ll
+cp index.html example.com/public/
+ll
+sudo shutdown -h now
+ll
+exit
+sudo shutdown -h now
+ll
+cd /mnt/
+ll
+mount
+df
+mkd mac_localhost
+ll
+s
+ll
+cd /mnt/
+ll
+ls
+s
+ls
+cd
+ls
+cd /mnt/
+ll
+sudo mkd mac_localhost
+sudo mkdir mac_localhost
+ll
+sudo mount -t vboxsf localhost /mnt/mac_localhost/
+ll
+cd mac_localhost/
+ll
+s
+sudo mount -t vboxsf localhost /mnt/mac_localhost/
+ll
+cd mac_localhost/
+ll
+la
+sudo shutdown -h now
+ll
+hgrep mount
+sudo mount -t vboxsf localhost /mnt/mac_localhost/
+ll /mnt/mac_localhost/
+ll
+cd ./~
+ll
+s
+rmf ./~
+ll
+cd .ssh/
+ll
+cat authorized_keys 
+ll
+su
+q
+ll
+cd .ssh/
+ll
+q
+ll
+su
+ll
+cd .ssh/
+ll
+rmf authorized_keys 
+ll
+su
+ll
+cd .ssh/
+ll
+su
+ll
+cd /media/
+ll
+s
+cd /mnt/mac_localhost/
+ll
+s
+ll
+rmf mac_localhost/
+sudo rmf mac_localhost/
+sudo rm -rf mac_localhost/
+ll
+su
+q
+ll
+vi
+ll
+sudo update-alternatives --config vi
+sudo update-alternatives --display 
+sudo update-alternatives --display editor
+vi
+sudo update-alternatives --display vi
+c
+sudo update-alternatives --list editor
+vim
+su
+cd /usr/local/src/vim/
+hg update default
+hg pull
+hg update
+cd src/
+make distclean
+make
+sudo make install
+vi
+vim
+cd
+vi .bashrc 
+vim .bashrc 
+vim .bash_aliases 
+sb
+vi
+su
+cd /usr/local/src/vim/
+make distclean 
+hgrep --with
+hgrep enable
+./configure --with-features=huge --enable-perlinterp --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config --enable-rubyinterp
+sudo -s
+ll
+cd
+cd /var/www/
+ll
+su
+echo $TERM
+tset =q
+tset -q
+tput colors
+su
+sudo -S
+sudo -i
+cd .ssh/
+ll
+la
+vi authorized_keys
+exit
+ll
+sudo -S
+sudo -s
+q
+sudo -s
+q
+cd .ssh/
+ll
+rm authorized_keys 
+ll
+q
+sudo shutdown -h now
+ll
+la
+cd .dotfiles
+ll
+la
+cd
+ll
+vi .vimrc 
+ll
+git config user.name "Bill Linux"
+touch .gitconfig
+git config user.name "Bill Linux"
+rm .gitconfig 
+git config --global user.name "Bill Linux"
+git config --global user.email "b.linux@laposte.net"
+ll
+mkdir vagrant
+cd vagrant/
+echo "# vagrant" >> README.md
+git init
+git add README.md
+git commit -m "First commit"
+git remote add origin https://github.com/billinux/vagrant.git
+git push origin master
+mkd resources
+cd
+ll
+cp .bashrc .bash_aliases vagrant/resources/
+cp .vimrc vagrant/resources/
+vp .dotfiles/scripts/create-site.sh vagrant/resources/
+cp .dotfiles/scripts/create-site.sh vagrant/resources/
+cp /etc/apt/sources.list vagrant/resources/
+cp /etc/apache2/sites-available/example.com vagrant/resources/
+la
+cp provision.sh vagrant/resources/
+cp .hushlogin vagrant/resources/
+cp .gitconfig vagrant/resources/
+h
+h >> vagrant/resources/vagrant.history
