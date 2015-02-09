@@ -1,4 +1,5 @@
 #clear
+export INS="/home/vagrant/install.sh"
 
 # OS
 # ==

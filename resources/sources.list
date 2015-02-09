@@ -1,9 +1,4 @@
-# 
-
-# deb cdrom:[Debian GNU/Linux 7.8.0 _Wheezy_ - Official Multi-architecture amd64/i386 NETINST #1 20150110-15:20]/ wheezy main
-
-#deb cdrom:[Debian GNU/Linux 7.8.0 _Wheezy_ - Official Multi-architecture amd64/i386 NETINST #1 20150110-15:20]/ wheezy main
-
+#
 deb http://ftp.fr.debian.org/debian/ wheezy main non-free contrib
 deb-src http://ftp.fr.debian.org/debian/ wheezy main non-free contrib
 
@@ -18,6 +13,8 @@ deb-src http://ftp.fr.debian.org/debian/ wheezy-updates main contrib non-free
 deb http://apt.opscode.com/ wheezy-0.10 main
 
 # Dotdeb
+# wget http://www.dotdeb.org/dotdeb.gpg
+# sudo apt-key add dotdeb.gpg
 deb http://packages.dotdeb.org wheezy-php56 all
 deb-src http://packages.dotdeb.org wheezy-php56 all
 
