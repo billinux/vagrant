@@ -1,0 +1,10 @@
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="apple_laptop"
+XKBLAYOUT="fr"
+XKBVARIANT="mac"
+XKBOPTIONS="lv3:ralt_switch"
+
+BACKSPACE="guess"
