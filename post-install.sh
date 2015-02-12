@@ -5,11 +5,10 @@ chown -R vagrant:root /usr/local
 # Post install
 # ------------
 echo "### Post-install"
-
-# APT
+# APT#{{{
 # ---
 echo "## APT"
-# Configure
+# Configure#{{{
 # ---------
 echo "# Configure..."
 cat > /etc/apt/sources.list <<EOF
@@ -48,50 +47,50 @@ deb-src http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian wheezy main
 #deb http://download.nus.edu.sg/mirror/mariadb/repo/10.0/ubuntu trusty main
 #deb-src http://download.nus.edu.sg/mirror/mariadb/repo/10.0/ubuntu trusty main
 EOF
-
-# APT-Recommends
+#}}}
+# APT-Recommends#{{{
 # --------------
 cat > /etc/apt/apt.conf.d/10norecommends <<EOF
 APT::Install-Recommends "0";
 EOF
-
-# APT-Suggests
+#}}}
+# APT-Suggests#{{{
 # ------------
 cat > /etc/apt/apt.conf.d/10nosuggests <<EOF
 APT::Install-Suggests "0";
 EOF
-
-# APT-Keyring
+#}}}
+# APT-Keyring#{{{
 # -----------
 echo "# Install Apt keyring..."
 apt-get install opscode-keyring
 wget http://www.dotdeb.org/dotdeb.gpg
 apt-key add dotdeb.gpg
 apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
-
-# APT-Update
+#}}}
+# APT-Update#{{{
 # ----------
 echo "# Update package list..."
 aptitude update
-
-# APT-Upgrade
+#}}}
+# APT-Upgrade#{{{
 # -----------
 echo "# Upgrade installed packages..."
 aptitude -y safe-upgrade
-
-# APT-Install usefull packages
+#}}}
+# APT-Install usefull packages#{{{
 # ----------------------------
 echo "# Install a few useful packages..."
 aptitude -y install sudo screen inetutils-telnet ntpdate bsd-mailx logrotate multitail tcpdump nmap lsof ssmtp bind9-host atop htop iptraf psmisc less mlocate mtr python rsync unzip dnsutils whois cron-apt geoip-database  openssh-server file lockfile-progs openssh-blacklist openssh-blacklist-extra logwatch
-
-# Bash config
+#}}}
+#}}}
+# Bash config#{{{
 # -----------
 echo "## Bash config"
 
-# For vagrant
+# For vagrant#{{{
 # -----------
-
-# Git clone
+# Git clone#{{{
 # -----------
 echo "# For 'vagrant'"
 git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt.git /usr/local/src/bash/sexy-bash-prompt
@@ -99,16 +98,16 @@ ln -sfn /usr/local/src/bash/sexy-bash-prompt/.bash_prompt /home/vagrant/.bash_pr
 
 git clone git://github.com/trapd00r/LS_COLORS.git /usr/local/src/dircolors/LS_COLORS
 ln -sfn /usr/local/src/dircolors/dircolors-solarized/dircolors.ansi-light /home/vagrant/.dircolors
-
-# Rbenv
+#}}}
+# Rbenv#{{{
 # -----
 git clone https://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv
-/home/vagrant/.rbenv/bin/rbenv init
+exec /home/vagrant/.rbenv/bin/rbenv init
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-/home/vagrant/.rbenv/plugins/ruby-build/install.sh
+exec /home/vagrant/.rbenv/plugins/ruby-build/install.sh
 chmod +x /home/vagrant/.rbenv/completions/rbenv.bash && ~/.rbenv/completions/rbenv.bash
-
-# Bashrc
+#}}}
+# Bashrc#{{{
 # ------
 cat > /home/vagrant/.bashrc <<EOF
 #clear
@@ -348,8 +347,8 @@ if [ -f $BASH_PROMPT ]; then
   . $BASH_PROMPT
 fi
 EOF
-
-# Bash aliases
+#}}}
+# Bash aliases#{{{
 # ------------
 cat > /home/vagrant/.bash_aliases <<EOF
 
@@ -397,8 +396,8 @@ function mkd() {
   mkdir -p "$@" && cd "$_";
 }
 EOF
-
-# Vimrc
+#}}}
+# Vimrc#{{{
 # -----
 cat > /home/vagrant/.vimrc <<EOF
 " Init"{{{
@@ -658,8 +657,9 @@ call neobundle#end()
 
 "Vim: set ft=vim sw=2 ts=2 sts=2 ff=unix fenc=utf-8:
 EOF
-
-# For root
+#}}}
+#}}}
+# For root#{{{
 # --------
 echo "# For 'root'"
 rm -f /root/.bashrc
@@ -668,3 +668,8 @@ ln -sfn /home/vagrant/.bash_aliases /root/.bash_aliases
 ln -sfn /home/vagrant/.dircolors /root/.dircolors
 ln -sfn /home/vagrant/.vimrc /root/.vimrc
 ln -sfn /usr/local/src/bash/sexy-bash-prompt/.bash_prompt /root/.bash_prompt
+#}}}
+
+chown -R vagrant:vagrant /home/vagrant
+#}}}
+echo "## DONE"
